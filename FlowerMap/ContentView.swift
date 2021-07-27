@@ -6,11 +6,53 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView{
+            ZStack{
+                //MapView()
+                    //.edgesIgnoringSafeArea(.all)
+                Color(.white)
+                    .edgesIgnoringSafeArea(.all)
+                VStack{
+                    
+                    Spacer()
+                    HStack{
+                        CustomButton(buttonName: "投稿"){
+                            // ぼたんの処理をかく
+                        }
+                        
+                        //カメラボタン
+                        CustomButton(buttonName: "カメラ"){
+                            // ぼたんの処理をかく
+                            
+                        }
+                        
+                        //ランキング
+                        CustomButton(buttonName: "ランキング"){
+                            // ぼたんの処理をかく
+                        }
+                        
+                        
+                    }//HStack
+                    .frame(width: .infinity, height: 120)
+                    .background(Color("backColor"))
+                    .frame(height:0)
+                }//VStack
+                
+                .toolbar(content: {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button(action: {
+                                
+                        }){
+                            Image("MenuIcon")
+                        }
+                    }
+                })//toolbar
+            }//ZStack
+        }//NavigationView
     }
 }
 
