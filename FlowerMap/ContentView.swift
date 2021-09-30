@@ -37,7 +37,7 @@ struct ContentView: View {
                         
                         
                     }//HStack
-                    .frame(width: .infinity, height: 120)
+                    .frame(height: 120)
                     .background(Color("backColor"))
                     .frame(height:0)
                 }//VStack

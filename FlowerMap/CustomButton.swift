@@ -30,7 +30,7 @@ struct CustomButton: View {
                         .padding(.all,25)
                         .padding(.top,-70)
                         .font(.title3)
-                        .foregroundColor(.white)
+                        .foregroundColor(Color("buttonFontColor"))
                 }
                 
                 
