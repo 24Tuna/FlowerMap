@@ -12,6 +12,7 @@
 		7F3B860326A5773000B77A5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F3B860226A5773000B77A5D /* Assets.xcassets */; };
 		7F3B860626A5773000B77A5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F3B860526A5773000B77A5D /* Preview Assets.xcassets */; };
 		7F3F206626A7B175003AF831 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F206526A7B175003AF831 /* CustomButton.swift */; };
+		7FB18B0B270A9D110010875D /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB18B0A270A9D110010875D /* MyPageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		7F3B860526A5773000B77A5D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7F3B860726A5773000B77A5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F3F206526A7B175003AF831 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		7FB18B0A270A9D110010875D /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				7F3B85FE26A5772F00B77A5D /* FlowerMapApp.swift */,
 				7F3B860026A5772F00B77A5D /* ContentView.swift */,
 				7F3F206526A7B175003AF831 /* CustomButton.swift */,
+				7FB18B0A270A9D110010875D /* MyPageView.swift */,
 				7F3B860226A5773000B77A5D /* Assets.xcassets */,
 				7F3B860726A5773000B77A5D /* Info.plist */,
 				7F3B860426A5773000B77A5D /* Preview Content */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F3B860126A5772F00B77A5D /* ContentView.swift in Sources */,
+				7FB18B0B270A9D110010875D /* MyPageView.swift in Sources */,
 				7F3B85FF26A5772F00B77A5D /* FlowerMapApp.swift in Sources */,
 				7F3F206626A7B175003AF831 /* CustomButton.swift in Sources */,
 			);
