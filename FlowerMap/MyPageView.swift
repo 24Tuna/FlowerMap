@@ -12,74 +12,27 @@ struct MyPageView: View {
         ZStack {
             Color("backColor")
                 .edgesIgnoringSafeArea(.all)
-            
             VStack {
                 HStack {
-                    Button(action: {
-                        // ボタンを押した時の動き
-                    }) {
-                        Image("PhotoIcon")
-                            
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 120, height: 80, alignment: .center)
-                            .cornerRadius(25)
-                            .clipped()
-                    }
+                    Spacer()
                     
-                    .padding()
+                    Image("PhotoIcon")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 140, height: 95, alignment: .center)
+                        .cornerRadius(35)
+//                        .clipped()
                     
-                    Button(action: {
-                        // ボタンを押した時の動き
-                    }) {
-                        Image("favorite")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 70, height: 70, alignment: .center)
-                    }
-                } //HStack
-                
-                ScrollView {
-                    MySubmission()
+                        Spacer()
+                    
+                    Image("favorite")
+                        .resizable()
+                        .frame(width: 70, height: 70, alignment: .center)
                         
-                        .padding()
-                    
-                    MySubmission()
-                        
-                        .padding()
-                    
-                    MySubmission()
-                        
-                        .padding()
-                    
-                    MySubmission()
-                        
-                        .padding()
-                    
-                    MySubmission()
-                        
-                        .padding()
-                    
-                    MySubmission()
-                        
-                        .padding()
-                    
-                    MySubmission()
-                        
-                        .padding()
-                    
-                    MySubmission()
-                        
-                        .padding()
-                    
-                    MySubmission()
-                        
-                        .padding()
-                    
-        
-                } //ScrollView
-            } //VStack
-        } //ZStack
+                        Spacer()
+                }
+            }
+        }
     }
 }
 
