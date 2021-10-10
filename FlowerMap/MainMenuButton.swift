@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CustomButton: View {
+struct MainMenuButton: View {
     let buttonName: String
     let action: () -> ()
     
@@ -43,7 +43,7 @@ struct CustomButton: View {
 
 struct CustomButton_Previews: PreviewProvider {
     static var previews: some View {
-        CustomButton(buttonName: "投稿") {
+        MainMenuButton(buttonName: "投稿") {
             
         }
     }
