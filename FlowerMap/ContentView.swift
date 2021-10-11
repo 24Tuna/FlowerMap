@@ -9,50 +9,59 @@ import SwiftUI
 import MapKit
 
 struct ContentView: View {
+    @State var isOpenSideMenu: Bool = false
+    @State var isOpenSearch : Bool = false
     var body: some View {
-        NavigationView{
-            ZStack{
+        ZStack{
+                
                 //MapView()
                     //.edgesIgnoringSafeArea(.all)
-                Color(.white)
-                    .edgesIgnoringSafeArea(.all)
-                VStack{
-                    
-                    Spacer()
-                    HStack{
-                        CustomButton(buttonName: "投稿"){
-                            // ぼたんの処理をかく
-                        }
-                        
-                        //カメラボタン
-                        CustomButton(buttonName: "カメラ"){
-                            // ぼたんの処理をかく
-                            
-                        }
-                        
-                        //ランキング
-                        CustomButton(buttonName: "ランキング"){
-                            // ぼたんの処理をかく
-                        }
-                        
-                        
-                    }//HStack
-                    .frame(height: 120)
-                    .background(Color("backColor"))
-                    .frame(height:0)
-                }//VStack
+                //FIXME:↓のColorはマップを実装するまでの仮置き
                 
-                .toolbar(content: {
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        Button(action: {
-                                
-                        }){
-                            Image("MenuIcon")
-                        }
+            Color(.white)
+                .edgesIgnoringSafeArea(.all)
+                
+            VStack{
+                    
+                Spacer()
+                    .frame(height:20)
+                    
+                HStack{
+                    Button(action: {
+                            //TODO:サイドメニューを開く
+                        self.isOpenSideMenu.toggle()
+                    }){
+                        Image("MenuIcon")
                     }
-                })//toolbar
-            }//ZStack
-        }//NavigationView
+                    .padding()
+                    Spacer()
+                }
+                    
+                Spacer()
+                HStack{
+                    MainMenuButton(buttonName: "投稿"){
+                        // ぼたんの処理をかく
+                    }
+                    
+                    //カメラボタン
+                    MainMenuButton(buttonName: "カメラ"){
+                        // ぼたんの処理をかく
+                    }
+                    
+                    //ランキング
+                    MainMenuButton(buttonName: "ランキング"){
+                        // ぼたんの処理をかく
+                    }
+                    
+                }//HStack
+                .frame(height: 120)
+                .background(Color("backColor"))
+                .frame(height:0)
+            }//VStack
+                
+            SideMenuView(isOpenSideMenu:  $isOpenSideMenu,                     isOpenSearch: $isOpenSearch)
+                .edgesIgnoringSafeArea(.all)
+        }//ZStack
     }
 }
 
