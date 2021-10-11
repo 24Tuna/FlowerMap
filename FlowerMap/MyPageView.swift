@@ -40,44 +40,7 @@ struct MyPageView: View {
                 } //HStack
                 
                 ScrollView {
-                    SubmissionView()
-                        
-                        .padding()
-                    
-                    SubmissionView()
-                        
-                        .padding()
-                    
-                    SubmissionView()
-                        
-                        .padding()
-                    
-                    SubmissionView()
-                        
-                        .padding()
-                    
-                    SubmissionView()
-                        
-                        .padding()
-                    
-                    SubmissionView()
-                        
-                        .padding()
-                    
-                    SubmissionView()
-                        
-                        .padding()
-                    
-                    SubmissionView()
-                        
-                        .padding()
-                    
-                    SubmissionView()
-                        
-                        .padding()
-                    
-                    SubmissionView()
-                        
+                    MySubmission()
                         .padding()
                 } //ScrollView
             } //VStack
