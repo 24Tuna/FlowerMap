@@ -17,10 +17,10 @@ struct SideMenuView: View {
     @State var dispSearchKey = ""
     
     //FIXME:後でデータベースに差し替える
-    let spring_Flos:[String] = [""]
-    let summer_Flos:[String] = [""]
-    let fall_Flos:[String] = [""]
-    let winter_Flos:[String] = ["椿"]
+    let springFlos:[String] = [""]
+    let summerFlos:[String] = [""]
+    let fallFlos:[String] = [""]
+    let winterFlos:[String] = ["ツバキ"]
     
     let spacer_Width = UIScreen.main.bounds.size.width / 2.5
     let animation_Width = 270
@@ -40,52 +40,52 @@ struct SideMenuView: View {
             }
             HStack{
                 List{
-                    
                     SideMenuButton(buttonName: "マイページ"){
                         //TODO: 後でマイページに飛ぶ処理を書く
                     }
                     SideMenuButton(buttonName: "検索"){
                         self.isOpenSearch.toggle()
                     }
-                    TextField("キーワードを入力してください",text:$inputText,onCommit:{
-                        //入力が完了したので検索キーワードに設定する
-                        dispSearchKey = inputText
-                        //検索キーワードをデバックエリアに出力する
-                        print("入力したキーワード："+dispSearchKey)
-                    })
-                    List{
-                        Text("春")
-                            .font(.headline)
-                        ForEach(0..<spring_Flos.count){ num in
-                                SearchMenuButton(buttonName: spring_Flos[num]){
+                    
+                    VStack{
+                        TextField("住所検索",text:$inputText,onCommit:{
+                            //入力が完了したので検索キーワードに設定する
+                            dispSearchKey = inputText
+                            //検索キーワードをデバックエリアに出力する
+                            print("入力したキーワード："+dispSearchKey)
+                        })
+                        .frame(height:55)
+                        .opacity(self.isOpenSearch ? 1.0 : 0.0)
+                        .animation(.easeIn(duration: 0.25))
+                
+                        CaptionView(capText:"春")
+                        ForEach(0..<springFlos.count){ num in
+                                SearchMenuButton(buttonName: springFlos[num]){
                                     
                                 }
                             }
-
-                        Text("夏")
-                            .font(.headline)
-                        ForEach(0..<summer_Flos.count){ num in
-                            SearchMenuButton(buttonName: summer_Flos[num]){
+                        
+                        CaptionView(capText:"夏")
+                        ForEach(0..<summerFlos.count){ num in
+                            SearchMenuButton(buttonName: summerFlos[num]){
                                 
                             }
                         }
 
-                        Text("秋")
-                            .font(.headline)
-                        ForEach(0..<fall_Flos.count){ num in
-                            SearchMenuButton(buttonName: fall_Flos[num]){
+                        CaptionView(capText:"秋")
+                        ForEach(0..<fallFlos.count){ num in
+                            SearchMenuButton(buttonName: fallFlos[num]){
                                 
                             }
                         }
-
-                        Text("冬")
-                            .font(.headline)
-                        ForEach(0..<winter_Flos.count){ num in
-                            SearchMenuButton(buttonName: winter_Flos[num]){
+                        
+                        CaptionView(capText:"冬")
+                        ForEach(0..<winterFlos.count){ num in
+                            SearchMenuButton(buttonName: winterFlos[num]){
                                 
                             }
                         }
-                    }//List
+                    }//VStack
                     .opacity(self.isOpenSearch ? 1.0 : 0.0)
                     .animation(.easeIn(duration: 0.25))
                     

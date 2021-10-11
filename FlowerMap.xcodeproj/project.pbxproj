@@ -13,6 +13,7 @@
 		7F3B860626A5773000B77A5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F3B860526A5773000B77A5D /* Preview Assets.xcassets */; };
 		7F3EAE8327056425000A8110 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3EAE8227056425000A8110 /* SideMenuView.swift */; };
 		7F3F206626A7B175003AF831 /* MainMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F206526A7B175003AF831 /* MainMenuButton.swift */; };
+		7F4A35412713D72600AFF0D1 /* CaptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A35402713D72600AFF0D1 /* CaptionView.swift */; };
 		7F511A33270AC2AF0094299C /* SideMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F511A32270AC2AF0094299C /* SideMenuButton.swift */; };
 		7F511A37270AE8120094299C /* SearchMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F511A36270AE8120094299C /* SearchMenuButton.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +27,7 @@
 		7F3B860726A5773000B77A5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F3EAE8227056425000A8110 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		7F3F206526A7B175003AF831 /* MainMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuButton.swift; sourceTree = "<group>"; };
+		7F4A35402713D72600AFF0D1 /* CaptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionView.swift; sourceTree = "<group>"; };
 		7F511A32270AC2AF0094299C /* SideMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuButton.swift; sourceTree = "<group>"; };
 		7F511A36270AE8120094299C /* SearchMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMenuButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,6 +66,7 @@
 				7F3B860026A5772F00B77A5D /* ContentView.swift */,
 				7F3EAE8227056425000A8110 /* SideMenuView.swift */,
 				7F3F206526A7B175003AF831 /* MainMenuButton.swift */,
+				7F4A35402713D72600AFF0D1 /* CaptionView.swift */,
 				7F511A32270AC2AF0094299C /* SideMenuButton.swift */,
 				7F511A36270AE8120094299C /* SearchMenuButton.swift */,
 				7F3B860226A5773000B77A5D /* Assets.xcassets */,
@@ -155,6 +158,7 @@
 				7F3EAE8327056425000A8110 /* SideMenuView.swift in Sources */,
 				7F3F206626A7B175003AF831 /* MainMenuButton.swift in Sources */,
 				7F511A37270AE8120094299C /* SearchMenuButton.swift in Sources */,
+				7F4A35412713D72600AFF0D1 /* CaptionView.swift in Sources */,
 				7F511A33270AC2AF0094299C /* SideMenuButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

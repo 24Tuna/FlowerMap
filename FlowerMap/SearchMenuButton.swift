@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct SearchMenuButton: View {
-    //@State var isOpenSearch : Bool
-    
     let buttonName: String
     let action: () -> ()
     
@@ -20,23 +18,22 @@ struct SearchMenuButton: View {
             action()
         }){
             HStack{
+                Spacer()
+                Text(buttonName)
+                    .foregroundColor(.black)
+                    .padding()
                 Image(buttonName)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width:30,height: 30)
-                Text(buttonName)
-                    .foregroundColor(.black)
             }
         }
-//        .opacity(self.isOpenSearch ? 1.0 : 0.0)
-//        .animation(.easeIn(duration: 0.25))
-        
     }
 }
 
 struct SearchMenuButton_Previews: PreviewProvider {
     static var previews: some View {
-        SearchMenuButton(/*isOpenSearch: true,*/ buttonName: "椿"){
+        SearchMenuButton(buttonName: "ツバキ"){
             
         }
     }

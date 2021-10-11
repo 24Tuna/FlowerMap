@@ -11,7 +11,6 @@ import MapKit
 struct ContentView: View {
     @State var isOpenSideMenu: Bool = false
     @State var isOpenSearch : Bool = false
-//    @State var select : Bool = false
     var body: some View {
         ZStack{
                 
