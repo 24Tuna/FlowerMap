@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MyPageView: View {
+    @State var isMyPhotos = true
+    @State var isMyfavorite = false
     var body: some View {
         ZStack {
             Color("backColor")
@@ -16,32 +18,51 @@ struct MyPageView: View {
             VStack {
                 HStack {
                     Button(action: {
-                        // ボタンを押した時の動き
+                        // 投稿一覧表示
+                        isMyPhotos = true
+                        isMyfavorite = false
                     }) {
-                        Image("PhotoIcon")
-                            
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 120, height: 80, alignment: .center)
-                            .cornerRadius(25)
-                            .clipped()
+                        ZStack {
+                            if isMyPhotos {
+                                Color(.white)
+                                    .frame(width: 120, height: 85, alignment: .center)
+                                    .cornerRadius(30)
+                            }
+                            Image("Photo")
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 80, height: 50, alignment: .center)
+                        }
                     }
+                    .frame(width: 120, height: 85)
                     
                     .padding()
                     
                     Button(action: {
-                        // ボタンを押した時の動き
+                        // いいねした投稿一覧
+                        isMyfavorite = true
+                        isMyPhotos = false
                     }) {
-                        Image("favorite")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 70, height: 70, alignment: .center)
+                        ZStack {
+                            if isMyfavorite {
+                                Color(.white)
+                                    .frame(width: 85, height: 85, alignment: .center)
+                                    .cornerRadius(30)
+                            }
+                            Image("favorite")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 60, height: 60, alignment: .center)
+                        }
                     }
+                    .frame(width: 85, height: 85, alignment: .center)
+                    
+                    .padding()
+                    
                 } //HStack
                 
                 ScrollView {
                     MySubmission()
-                        .padding()
                 } //ScrollView
             } //VStack
         } //ZStack
