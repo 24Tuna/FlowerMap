@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7F115A0B2713FBD00090EC86 /* MainMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F115A0A2713FBD00090EC86 /* MainMenuButton.swift */; };
+		7F115A0F2713FE4C0090EC86 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F115A0E2713FE4C0090EC86 /* PostView.swift */; };
 		7F3B85FF26A5772F00B77A5D /* FlowerMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3B85FE26A5772F00B77A5D /* FlowerMapApp.swift */; };
 		7F3B860126A5772F00B77A5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3B860026A5772F00B77A5D /* ContentView.swift */; };
 		7F3B860326A5773000B77A5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F3B860226A5773000B77A5D /* Assets.xcassets */; };
@@ -16,12 +17,15 @@
 		7F4A35412713D72600AFF0D1 /* CaptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A35402713D72600AFF0D1 /* CaptionView.swift */; };
 		7F511A33270AC2AF0094299C /* SideMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F511A32270AC2AF0094299C /* SideMenuButton.swift */; };
 		7F511A37270AE8120094299C /* SearchMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F511A36270AE8120094299C /* SearchMenuButton.swift */; };
+		7F5FAD58271AA03400292578 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5FAD57271AA03400292578 /* TagView.swift */; };
+		7F6C075A2717C291007397C9 /* PostManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6C07592717C291007397C9 /* PostManagerView.swift */; };
 		7F7879F42710063800CD1255 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7879F32710063800CD1255 /* MyPageView.swift */; };
 		7F7879F8271006B600CD1255 /* SubmissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7879F7271006B600CD1255 /* SubmissionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7F115A0A2713FBD00090EC86 /* MainMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuButton.swift; sourceTree = "<group>"; };
+		7F115A0E2713FE4C0090EC86 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		7F3B85FB26A5772F00B77A5D /* FlowerMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowerMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F3B85FE26A5772F00B77A5D /* FlowerMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerMapApp.swift; sourceTree = "<group>"; };
 		7F3B860026A5772F00B77A5D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +36,8 @@
 		7F4A35402713D72600AFF0D1 /* CaptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionView.swift; sourceTree = "<group>"; };
 		7F511A32270AC2AF0094299C /* SideMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuButton.swift; sourceTree = "<group>"; };
 		7F511A36270AE8120094299C /* SearchMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMenuButton.swift; sourceTree = "<group>"; };
+		7F5FAD57271AA03400292578 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		7F6C07592717C291007397C9 /* PostManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostManagerView.swift; sourceTree = "<group>"; };
 		7F7879F32710063800CD1255 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		7F7879F7271006B600CD1255 /* SubmissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmissionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,9 +78,12 @@
 				7F4A35402713D72600AFF0D1 /* CaptionView.swift */,
 				7F511A32270AC2AF0094299C /* SideMenuButton.swift */,
 				7F511A36270AE8120094299C /* SearchMenuButton.swift */,
+				7F115A0E2713FE4C0090EC86 /* PostView.swift */,
+				7F6C07592717C291007397C9 /* PostManagerView.swift */,
 				7F115A0A2713FBD00090EC86 /* MainMenuButton.swift */,
 				7F7879F32710063800CD1255 /* MyPageView.swift */,
 				7F7879F7271006B600CD1255 /* SubmissionView.swift */,
+				7F5FAD57271AA03400292578 /* TagView.swift */,
 				7F3B860226A5773000B77A5D /* Assets.xcassets */,
 				7F3B860726A5773000B77A5D /* Info.plist */,
 				7F3B860426A5773000B77A5D /* Preview Content */,
@@ -164,10 +173,13 @@
 				7F3B85FF26A5772F00B77A5D /* FlowerMapApp.swift in Sources */,
 				7F3EAE8327056425000A8110 /* SideMenuView.swift in Sources */,
 				7F115A0B2713FBD00090EC86 /* MainMenuButton.swift in Sources */,
+				7F6C075A2717C291007397C9 /* PostManagerView.swift in Sources */,
 				7F511A37270AE8120094299C /* SearchMenuButton.swift in Sources */,
 				7F4A35412713D72600AFF0D1 /* CaptionView.swift in Sources */,
 				7F511A33270AC2AF0094299C /* SideMenuButton.swift in Sources */,
+				7F115A0F2713FE4C0090EC86 /* PostView.swift in Sources */,
 				7F7879F8271006B600CD1255 /* SubmissionView.swift in Sources */,
+				7F5FAD58271AA03400292578 /* TagView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

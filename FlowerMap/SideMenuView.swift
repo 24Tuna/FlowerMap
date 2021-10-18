@@ -10,6 +10,7 @@ import SwiftUI
 struct SideMenuView: View {
     @Binding var isOpenSideMenu : Bool
     @Binding var isOpenSearch : Bool
+    @State var isModalActive = false
     
     //入力中の文字列を保持する状態変数
     @State var inputText:String = ""
@@ -41,8 +42,13 @@ struct SideMenuView: View {
             HStack{
                 List{
                     SideMenuButton(buttonName: "マイページ"){
-                        //TODO: 後でマイページに飛ぶ処理を書く
+                        self.isModalActive.toggle()
+                        self.isOpenSideMenu = false
                     }
+                    .sheet(isPresented:$isModalActive){
+                        
+                    }
+                    
                     SideMenuButton(buttonName: "検索"){
                         self.isOpenSearch.toggle()
                     }

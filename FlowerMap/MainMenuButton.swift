@@ -12,8 +12,6 @@ struct MainMenuButton: View {
     let action: () -> ()
     
     var body: some View {
-        
-        Spacer()
         VStack{
             
             //投稿ボタン
@@ -29,15 +27,14 @@ struct MainMenuButton: View {
                         .fontWeight(.bold)
                         .padding(.all,25)
                         .padding(.top,-70)
-                        .font(.title3)
+                        .font(.custom("HiraMaruProN-W4", size: 17))
                         .foregroundColor(Color("buttonFontColor"))
                 }
                 
                 
             }
+            .frame(width: 120, height: 120)
         }
-        Spacer()
-        
     }
 }
 
