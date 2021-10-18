@@ -17,7 +17,7 @@ struct TagView: View {
             Spacer()
                 .frame(width:0)
             Button(action: {
-                
+                //FIXME:削除処理を入れる
             }){
                 Image(systemName: "xmark")
                     .padding(.trailing)

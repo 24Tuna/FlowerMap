@@ -28,7 +28,6 @@
 		7F9D3DFE2718300700D24399 /* Ranking2nd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D3DFD2718300700D24399 /* Ranking2nd.swift */; };
 		7F9D3E002718301300D24399 /* Ranking3rd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D3DFF2718301300D24399 /* Ranking3rd.swift */; };
 		7FB18B0B270A9D110010875D /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB18B0A270A9D110010875D /* MyPageView.swift */; };
- 00921be9d7ad7b533fb474841c3ca70c4fda97d4
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,7 +56,6 @@
 		7F9D3DFD2718300700D24399 /* Ranking2nd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking2nd.swift; sourceTree = "<group>"; };
 		7F9D3DFF2718301300D24399 /* Ranking3rd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking3rd.swift; sourceTree = "<group>"; };
 		7FB18B0A270A9D110010875D /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
- 00921be9d7ad7b533fb474841c3ca70c4fda97d4
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +109,7 @@
 				7F9D3DFB27182FFB00D24399 /* Ranking1st.swift */,
 				7F9D3DFD2718300700D24399 /* Ranking2nd.swift */,
 				7F9D3DFF2718301300D24399 /* Ranking3rd.swift */,
- 00921be9d7ad7b533fb474841c3ca70c4fda97d4
+
 				7F3B860226A5773000B77A5D /* Assets.xcassets */,
 				7F3B860726A5773000B77A5D /* Info.plist */,
 				7F3B860426A5773000B77A5D /* Preview Content */,
@@ -216,7 +214,6 @@
 				7F9D3DFE2718300700D24399 /* Ranking2nd.swift in Sources */,
 				7F9D3E002718301300D24399 /* Ranking3rd.swift in Sources */,
 				7F9D3DF42716E6B800D24399 /* RnkingView.swift in Sources */,
- 00921be9d7ad7b533fb474841c3ca70c4fda97d4
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
