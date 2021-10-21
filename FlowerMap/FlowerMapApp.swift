@@ -11,7 +11,8 @@ import SwiftUI
 struct FlowerMapApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //ContentView()
+            PostManagerView()
         }
     }
 }
