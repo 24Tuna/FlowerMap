@@ -10,6 +10,28 @@ import SwiftUI
 struct MyPageView: View {
     @State var isMyPhotos = true
     @State var isMyfavorite = false
+    
+    let submission: [MySubmission]
+    init() {
+        var work: [MySubmission] = []
+        for num in 0...5 {
+            work.append(MySubmission(number: num))
+        }
+        submission = work
+    }
+    
+    let photoWidth = UIScreen.main.bounds.size.width / 4
+    let photoHeight = UIScreen.main.bounds.size.height / 10
+    let photoFrameWidth = UIScreen.main.bounds.size.width / 2.5
+    let photoFrameHeight = UIScreen.main.bounds.size.height / 6.5
+    
+    let favoriteWidth = UIScreen.main.bounds.size.width / 5
+    let favoriteHeight = UIScreen.main.bounds.size.height / 0
+    let favoriteFrameWidth = UIScreen.main.bounds.size.width / 3.7
+    let favoriteFrameHeight = UIScreen.main.bounds.size.height / 6.5
+    
+    let submissionHeight = UIScreen.main.bounds.size.height / 4.5
+    
     var body: some View {
         ZStack {
             Color("backColor")
@@ -25,17 +47,17 @@ struct MyPageView: View {
                         ZStack {
                             if isMyPhotos {
                                 Color(.white)
-                                    .frame(width: 120, height: 85, alignment: .center)
+                                    .frame(width: photoFrameWidth, height: photoFrameHeight)
                                     .cornerRadius(30)
                             }
                             Image("Photo")
                                 .resizable()
                                 .scaledToFill()
-                                .frame(width: 80, height: 50, alignment: .center)
+                                .frame(width: photoWidth, height: photoHeight)
                         }
                     }
-                    .frame(width: 120, height: 85)
-                    
+                    .frame(width: photoFrameWidth, height: photoFrameHeight)
+
                     .padding()
                     
                     Button(action: {
@@ -46,23 +68,25 @@ struct MyPageView: View {
                         ZStack {
                             if isMyfavorite {
                                 Color(.white)
-                                    .frame(width: 85, height: 85, alignment: .center)
+                                    .frame(width: favoriteFrameWidth, height: favoriteFrameHeight)
                                     .cornerRadius(30)
                             }
                             Image("favorite")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(width: 60, height: 60, alignment: .center)
+                                .frame(width: favoriteWidth, height: favoriteHeight)
                         }
                     }
-                    .frame(width: 85, height: 85, alignment: .center)
-                    
+                    .frame(width: favoriteFrameWidth, height: favoriteFrameHeight)
                     .padding()
                     
                 } //HStack
-                
-                ScrollView {
-                    MySubmission()
+                ScrollView([.vertical]) {
+                    ForEach (submission) { num in
+                        num
+                            .padding()
+                            .frame(height: submissionHeight)
+                    }
                 } //ScrollView
             } //VStack
         } //ZStack

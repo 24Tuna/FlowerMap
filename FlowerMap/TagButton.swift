@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TagButton: View {
+    let tagSize = UIScreen.main.bounds.size.width / 20
     let tagtext: String
     var body: some View {
         Button(action: {
@@ -17,6 +18,7 @@ struct TagButton: View {
                 Text("#\(tagtext)")
                     .background(Color("backColor"))
                     .foregroundColor(Color.white)
+                    .font(.system(size: tagSize))
             }
         }
     }
