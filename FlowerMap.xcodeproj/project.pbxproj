@@ -15,7 +15,6 @@
 		7F3B860626A5773000B77A5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F3B860526A5773000B77A5D /* Preview Assets.xcassets */; };
 		7F3EAE8327056425000A8110 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3EAE8227056425000A8110 /* SideMenuView.swift */; };
 		7F4A35412713D72600AFF0D1 /* CaptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A35402713D72600AFF0D1 /* CaptionView.swift */; };
-		7F4B830B2722694D000014DB /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4B830A2722694D000014DB /* MyPageView.swift */; };
 		7F511A33270AC2AF0094299C /* SideMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F511A32270AC2AF0094299C /* SideMenuButton.swift */; };
 		7F511A37270AE8120094299C /* SearchMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F511A36270AE8120094299C /* SearchMenuButton.swift */; };
 		7F561A282720FF19001972B0 /* TagManegerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F561A272720FF19001972B0 /* TagManegerListView.swift */; };
@@ -30,8 +29,8 @@
 		7F9D3DFC27182FFB00D24399 /* Ranking1st.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D3DFB27182FFB00D24399 /* Ranking1st.swift */; };
 		7F9D3DFE2718300700D24399 /* Ranking2nd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D3DFD2718300700D24399 /* Ranking2nd.swift */; };
 		7F9D3E002718301300D24399 /* Ranking3rd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D3DFF2718301300D24399 /* Ranking3rd.swift */; };
-		7FB18B0B270A9D110010875D /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB18B0A270A9D110010875D /* MyPageView.swift */; };
 		7FD696B3272112A200C39E2E /* Ranking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD696B2272112A200C39E2E /* Ranking.swift */; };
+		7FF50F2927226B5600F846EB /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF50F2827226B5600F846EB /* MyPageView.swift */; };
 		7FFF0BB0271D3ED1002C5A05 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFF0BAF271D3ED1002C5A05 /* PhotoView.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +45,6 @@
 		7F3B860726A5773000B77A5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F3EAE8227056425000A8110 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		7F4A35402713D72600AFF0D1 /* CaptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionView.swift; sourceTree = "<group>"; };
-		7F4B830A2722694D000014DB /* MyPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		7F511A32270AC2AF0094299C /* SideMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuButton.swift; sourceTree = "<group>"; };
 		7F511A36270AE8120094299C /* SearchMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMenuButton.swift; sourceTree = "<group>"; };
 		7F561A272720FF19001972B0 /* TagManegerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagManegerListView.swift; sourceTree = "<group>"; };
@@ -63,6 +61,7 @@
 		7F9D3DFF2718301300D24399 /* Ranking3rd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking3rd.swift; sourceTree = "<group>"; };
 		7FB18B0A270A9D110010875D /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		7FD696B2272112A200C39E2E /* Ranking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking.swift; sourceTree = "<group>"; };
+		7FF50F2827226B5600F846EB /* MyPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		7FFF0BAF271D3ED1002C5A05 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,7 +118,7 @@
 				7F9D3DFD2718300700D24399 /* Ranking2nd.swift */,
 				7F9D3DFF2718301300D24399 /* Ranking3rd.swift */,
 				7FD696B2272112A200C39E2E /* Ranking.swift */,
-				7F4B830A2722694D000014DB /* MyPageView.swift */,
+				7FF50F2827226B5600F846EB /* MyPageView.swift */,
 				7F3B860226A5773000B77A5D /* Assets.xcassets */,
 				7F3B860726A5773000B77A5D /* Info.plist */,
 				7F3B860426A5773000B77A5D /* Preview Content */,
@@ -215,7 +214,6 @@
 				7F3B860126A5772F00B77A5D /* MainView.swift in Sources */,
 				7F9D3DFC27182FFB00D24399 /* Ranking1st.swift in Sources */,
 				7FD696B3272112A200C39E2E /* Ranking.swift in Sources */,
-				7FB18B0B270A9D110010875D /* MyPageView.swift in Sources */,
 				7FFF0BB0271D3ED1002C5A05 /* PhotoView.swift in Sources */,
 				7F3B85FF26A5772F00B77A5D /* FlowerMapApp.swift in Sources */,
 				7F3EAE8327056425000A8110 /* SideMenuView.swift in Sources */,
@@ -223,13 +221,13 @@
 				7F6C075A2717C291007397C9 /* PostManagerView.swift in Sources */,
 				7F561A3127211BEB001972B0 /* ContentView.swift in Sources */,
 				7F511A37270AE8120094299C /* SearchMenuButton.swift in Sources */,
+				7FF50F2927226B5600F846EB /* MyPageView.swift in Sources */,
 				7F561A282720FF19001972B0 /* TagManegerListView.swift in Sources */,
 				7F4A35412713D72600AFF0D1 /* CaptionView.swift in Sources */,
 				7F561A2B27210CD1001972B0 /* CloseButtonView.swift in Sources */,
 				7F9D3DFA27182F6800D24399 /* TagButton.swift in Sources */,
 				7F511A33270AC2AF0094299C /* SideMenuButton.swift in Sources */,
 				7F115A0F2713FE4C0090EC86 /* PostView.swift in Sources */,
-				7F4B830B2722694D000014DB /* MyPageView.swift in Sources */,
 				7F7879F8271006B600CD1255 /* SubmissionView.swift in Sources */,
 				7F5FAD58271AA03400292578 /* PostTagView.swift in Sources */,
 				7F7879F2270EA66E00CD1255 /* MySubmission.swift in Sources */,
