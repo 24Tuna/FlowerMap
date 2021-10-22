@@ -1,35 +1,37 @@
 //
-//  Ranking3rd.swift
+//  Ranking.swift
 //  FlowerMap
 //
-//  Created by cmStudent on 2021/10/14.
+//  Created by cmStudent on 2021/10/21.
 //
 
 import SwiftUI
+typealias ranking = View & Identifiable
 
-struct Ranking3rd: View {
+struct Ranking: ranking {
+    @State var number: Int
+    let id = UUID()
     let Width = UIScreen.main.bounds.size.width / 1.05
     let Height = UIScreen.main.bounds.size.height / 4.5
     let width = UIScreen.main.bounds.size.width / 5
     let height = UIScreen.main.bounds.size.height / 11
     var body: some View {
-        HStack {
+        ZStack {
             HStack {
-                Image("3rd")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
+                Text(String(number))
+                    .font(.largeTitle)
+                    .foregroundColor(Color("backColor"))
                     .frame(width: width, height: height)
-                // ランキング1位の投稿
             }
             .frame(width: Width, height: Height, alignment: .leading)
-            .background(Color("buttonFontColor"))
-            .cornerRadius(5)
+                .background(Color("buttonFontColor"))
+                .cornerRadius(5)
         }
     }
 }
 
-struct Ranking3rd_Previews: PreviewProvider {
+struct Ranking_Previews: PreviewProvider {
     static var previews: some View {
-        Ranking3rd()
+        Ranking(number: 4)
     }
 }

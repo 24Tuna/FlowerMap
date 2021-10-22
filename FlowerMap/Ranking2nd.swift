@@ -8,18 +8,20 @@
 import SwiftUI
 
 struct Ranking2nd: View {
+    let Width = UIScreen.main.bounds.size.width / 1.05
+    let Height = UIScreen.main.bounds.size.height / 4.5
+    let width = UIScreen.main.bounds.size.width / 5
+    let height = UIScreen.main.bounds.size.height / 11
     var body: some View {
         HStack {
             HStack {
                 Image("2nd")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 65, height: 50, alignment: .center)
-                
+                    .frame(width: width, height: height)
                 // ランキング1位の投稿
-                
             }
-            .frame(width: 305, height: 130, alignment: .leading)
+            .frame(width: Width, height: Height, alignment: .leading)
             .background(Color("buttonFontColor"))
             .cornerRadius(5)
         }

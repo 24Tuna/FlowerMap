@@ -6,51 +6,63 @@
 //
 
 import SwiftUI
+typealias Listcell = View & Identifiable
 
-struct MySubmission: View {
+struct MySubmission: Listcell {
+    @State var number: Int
+    let id = UUID()
+
+    let mypictureWidth = UIScreen.main.bounds.size.width / 2.5
+    let mypictureHeight = UIScreen.main.bounds.size.height / 5.5
+
+    let locationsWidth = UIScreen.main.bounds.size.width / 3
+    let locationsHeight = UIScreen.main.bounds.size.height / 0
+
+    let locationSize = UIScreen.main.bounds.size.width / 20
+    
+    let mapIconWidth = UIScreen.main.bounds.size.width / 10
+    let mapIconHeight = UIScreen.main.bounds.size.height / 20
+
+    let submissionWidth = UIScreen.main.bounds.size.width / 1.05
+    let submissionHeight = UIScreen.main.bounds.size.height / 4.5
+    
     let Location: String = "位置情報"
     let tags:[String] = ["新宿", "渋谷"]
     var body: some View {
         HStack {
-            Image("picture")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 150, height: 150, alignment: .center)
+            PhotoView()
+                .frame(width: mypictureWidth, height: mypictureHeight)
             
             VStack {
                 HStack {
-                    ForEach(0..<tags.count) { num in TagButton(tagtext: tags[num])
-                        .frame(width: 55, height: 25, alignment: .center)
-                        // タグ数が3つ以上ならば改行(できたら)
-                        if tags.count < 3 {
-                            // 改行にする処理
-                        }
+                    ForEach(0..<tags.count) {
+                        num in TagButton(tagtext: tags[num])
                     }
                 }
                 
-                .frame(width: 110, height: 70, alignment: .center)
-                
+                .frame(width: locationsWidth, height: locationsHeight)
+
                 HStack {
                     Image("MapIcon")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 30, height: 30, alignment: .center)
-                    
+                        .frame(width: mapIconWidth, height: mapIconHeight)
+
                     Button(action: {
                         // 同じ位置情報の投稿一覧へ
                     }) {
                         Text(Location)
                             .foregroundColor(Color("fontColor"))
-                            .frame(width: 80, height: 50, alignment: .center)
+                            .font(.system(size: locationSize))
                     }
                 }
                 
-                .frame(width: 0, height: 30, alignment: .center)
-                
+                .frame(width: locationsWidth, height: locationsHeight)
+
             }
         }
         
-        .frame(width: 305, height: 160, alignment: .center)
+        .frame(width: submissionWidth, height: submissionHeight)
         .background(Color("buttonFontColor"))
         .cornerRadius(5)
     }
@@ -58,6 +70,6 @@ struct MySubmission: View {
 
 struct MySubmission_Previews: PreviewProvider {
     static var previews: some View {
-        MySubmission()
+        MySubmission(number: 0)
     }
 }

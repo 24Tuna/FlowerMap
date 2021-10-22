@@ -8,19 +8,31 @@
 import SwiftUI
 
 struct RnkingView: View {
+    let submissionHeight = UIScreen.main.bounds.size.height / 4.5
+    let ranking: [Ranking]
+    init() {
+        var work: [Ranking] = []
+        for num in 4...5 {
+            work.append(Ranking(number: num))
+        }
+        ranking = work
+    }
     var body: some View {
         ZStack {
             Color("backColor")
                 .edgesIgnoringSafeArea(.all)
             ScrollView {
                 Ranking1st()
-                    .padding()
                 
                 Ranking2nd()
-                    .padding()
                 
                 Ranking3rd()
-                    .padding()
+
+                ForEach(ranking) {num in
+                    num
+                        .padding()
+                        .frame(height: submissionHeight)
+                }
             }
         }
     }

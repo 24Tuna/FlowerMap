@@ -29,6 +29,11 @@
 		7F9D3DFC27182FFB00D24399 /* Ranking1st.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D3DFB27182FFB00D24399 /* Ranking1st.swift */; };
 		7F9D3DFE2718300700D24399 /* Ranking2nd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D3DFD2718300700D24399 /* Ranking2nd.swift */; };
 		7F9D3E002718301300D24399 /* Ranking3rd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D3DFF2718301300D24399 /* Ranking3rd.swift */; };
+
+		7FB18B0B270A9D110010875D /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB18B0A270A9D110010875D /* MyPageView.swift */; };
+		7FD696B3272112A200C39E2E /* Ranking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD696B2272112A200C39E2E /* Ranking.swift */; };
+		7FFF0BB0271D3ED1002C5A05 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFF0BAF271D3ED1002C5A05 /* PhotoView.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +61,11 @@
 		7F9D3DFB27182FFB00D24399 /* Ranking1st.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking1st.swift; sourceTree = "<group>"; };
 		7F9D3DFD2718300700D24399 /* Ranking2nd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking2nd.swift; sourceTree = "<group>"; };
 		7F9D3DFF2718301300D24399 /* Ranking3rd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking3rd.swift; sourceTree = "<group>"; };
+
+		7FB18B0A270A9D110010875D /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		7FD696B2272112A200C39E2E /* Ranking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking.swift; sourceTree = "<group>"; };
+		7FFF0BAF271D3ED1002C5A05 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +102,7 @@
 				7F3B860026A5772F00B77A5D /* MainView.swift */,
 				7F7879F1270EA66E00CD1255 /* MySubmission.swift */,
 				7F9D3DF927182F6800D24399 /* TagButton.swift */,
+				7FFF0BAF271D3ED1002C5A05 /* PhotoView.swift */,
 				7F3EAE8227056425000A8110 /* SideMenuView.swift */,
 				7F4A35402713D72600AFF0D1 /* CaptionView.swift */,
 				7F511A32270AC2AF0094299C /* SideMenuButton.swift */,
@@ -108,6 +119,9 @@
 				7F9D3DFB27182FFB00D24399 /* Ranking1st.swift */,
 				7F9D3DFD2718300700D24399 /* Ranking2nd.swift */,
 				7F9D3DFF2718301300D24399 /* Ranking3rd.swift */,
+
+				7FD696B2272112A200C39E2E /* Ranking.swift */,
+
 				7F3B860226A5773000B77A5D /* Assets.xcassets */,
 				7F3B860726A5773000B77A5D /* Info.plist */,
 				7F3B860426A5773000B77A5D /* Preview Content */,
@@ -194,6 +208,11 @@
 			files = (
 				7F3B860126A5772F00B77A5D /* MainView.swift in Sources */,
 				7F9D3DFC27182FFB00D24399 /* Ranking1st.swift in Sources */,
+
+				7FD696B3272112A200C39E2E /* Ranking.swift in Sources */,
+				7FB18B0B270A9D110010875D /* MyPageView.swift in Sources */,
+				7FFF0BB0271D3ED1002C5A05 /* PhotoView.swift in Sources */,
+
 				7F3B85FF26A5772F00B77A5D /* FlowerMapApp.swift in Sources */,
 				7F3EAE8327056425000A8110 /* SideMenuView.swift in Sources */,
 				7F115A0B2713FBD00090EC86 /* MainMenuButton.swift in Sources */,
