@@ -15,7 +15,7 @@ struct TagButton: View {
         }) {
             VStack {
                 Text("#\(tagtext)")
-                    .background(Color("backColor"))
+                    .background(Color("tagColor"))
                     .foregroundColor(Color.white)
             }
         }

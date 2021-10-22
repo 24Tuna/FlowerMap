@@ -2,78 +2,99 @@
 //  ContentView.swift
 //  FlowerMap
 //
-//  Created by cmStudent on 2021/07/19.
+//  Created by cmStudent on 2021/10/21.
 //
 
 import SwiftUI
-import MapKit
 
 struct ContentView: View {
-    @State var isOpenSideMenu: Bool = false
-    @State var isOpenSearch : Bool = false
+    @Binding var isOpenContent: Bool
+    
+    let tags:[String] = ["タグ名","タグ名"]
+    let good = "100"
+    
+    var sumWidth = 0.0
+    let windowWidth = UIScreen.main.bounds.size.width / 1.2
+    let windowHeight = UIScreen.main.bounds.size.height / 1.2
+    
     var body: some View {
-        NavigationView{
-            ZStack{
-                
-                //MapView()
-                    //.edgesIgnoringSafeArea(.all)
-                //FIXME:↓のColorはマップを実装するまでの仮置き
-                
-            Color(.white)
+        ZStack{
+            Color("backColor")
                 .edgesIgnoringSafeArea(.all)
-                
             VStack{
-                    
-                Spacer()
-                HStack{
-                    
-                    Spacer()
-                    
-                    MainMenuButton(buttonName: "投稿"){
-                        // ぼたんの処理をかく
-                    }
-                    
-                    Spacer()
-                    
-                    //カメラボタン
-                    MainMenuButton(buttonName: "カメラ"){
-                        // ぼたんの処理をかく
-                    }
-                    
-                    Spacer()
-                    
-                    //ランキング
-                    MainMenuButton(buttonName: "ランク"){
-                        // ぼたんの処理をかく
-                    }
-                    
-                    Spacer()
-                    
-                }//HStack
-                .frame(width:.infinity,height: 120)
-                .background(Color("backColor"))
-            }//VStack
                 
-            .toolbar(content: {
-                ToolbarItem(placement:.navigationBarLeading) {
-                    Button(action: {
-                        //TODO:サイドメニューを開く
-                        self.isOpenSideMenu.toggle()
-                    }){
-                        Image("MenuIcon")
+                HStack{
+                    Spacer()
+                    CloseButtonView(isOpen:$isOpenContent)
+                }
+                
+                Image("picture")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 300)
+                Spacer()
+                
+                //タグ
+                Group{
+                    HStack{
+                        Text("タグ")
+                            .font(.title)
+                        Spacer()
+                    }
+                
+                    HStack{
+                        ForEach(0..<tags.count){num in
+                            PostTagView(tagText: tags[num])
+                        }
+                    }
+                    
+                }
+                
+                Spacer()
+                
+                //位置情報
+                Group{
+                    HStack{
+                        
+                        Text("位置情報")
+                            .font(.title)
+                        Spacer()
+                    }
+                    
+                    HStack{
+                        Text("aaaaaa")
+                            
+                        Spacer()
                     }
                 }
-            })//toolbar
                 
-            SideMenuView(isOpenSideMenu:  $isOpenSideMenu,                     isOpenSearch: $isOpenSearch)
-                .edgesIgnoringSafeArea(.all)
-        }//ZStack
+                Spacer()
+                
+                //いいねボタン
+                Button(action: {
+                        //TODO:後でいいね数を加算する処理を入れる
+                }){
+                    Image(systemName: "heart.fill")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .foregroundColor(Color("appRed"))
+                        .frame(width:35)
+                    Text(good)
+                        .font(.title2)
+                }
+                
+                Spacer()
+                
+            }//VStack
+            .frame(width: windowWidth, height: windowHeight)
+            .padding()
+            .background(Color("buttonFontColor"))
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(isOpenContent: Binding.constant(true))
     }
 }

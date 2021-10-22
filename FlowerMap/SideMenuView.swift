@@ -10,7 +10,8 @@ import SwiftUI
 struct SideMenuView: View {
     @Binding var isOpenSideMenu : Bool
     @Binding var isOpenSearch : Bool
-    @State var isModalActive = false
+    //ActionSheetのsheet
+    @State var isShowAction = false
     
     //入力中の文字列を保持する状態変数
     @State var inputText:String = ""
@@ -39,13 +40,14 @@ struct SideMenuView: View {
             .onTapGesture {
                 self.isOpenSideMenu = false
             }
+            
             HStack{
                 List{
                     SideMenuButton(buttonName: "マイページ"){
-                        self.isModalActive.toggle()
+                        self.isShowAction.toggle()
                         self.isOpenSideMenu = false
                     }
-                    .sheet(isPresented:$isModalActive){
+                    .sheet(isPresented:$isShowAction){
                         
                     }
                     
