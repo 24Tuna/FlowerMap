@@ -21,20 +21,28 @@ struct RnkingView: View {
         ZStack {
             Color("backColor")
                 .edgesIgnoringSafeArea(.all)
-            ScrollView {
-                Ranking1st()
-                
-                Ranking2nd()
-                
-                Ranking3rd()
-
-                ForEach(ranking) {num in
-                    num
-                        .padding()
-                        .frame(height: submissionHeight)
+            VStack{
+                HStack{
+                    Spacer()
                 }
-            }
-        }
+                ScrollView {
+                    Ranking1st()
+                    
+                    Ranking2nd()
+                    
+                    Ranking3rd()
+
+                    ForEach(ranking) {num in
+                        num
+                            .padding()
+                            .frame(height: submissionHeight)
+                    }
+                }
+            }//ScrollView
+        }//ZStack
+        .onAppear(perform: {
+            
+        })
     }
 }
 

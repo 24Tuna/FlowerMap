@@ -12,7 +12,7 @@ struct TagManegerListView: View {
     
     let windowWidth = UIScreen.main.bounds.size.width / 1.2
     
-    let tags:[String] = ["タグ名","タグ名", "タグタグタグ"]
+    let tags:[String] = ["タグ名","タグ名", "タグタグタグ","ホゲホゲ","ア","test","hogehoge"]
     
 //    init(){
 //        //List全体の背景色の設定
@@ -47,7 +47,7 @@ struct TagManegerListView: View {
             .frame(width: windowWidth)
             .padding()
             .background(Color("buttonFontColor"))
-        }
+        }//ZStack
         .opacity(self.isOpenList ? 1.0 : 0.0)
         .animation(.easeIn(duration: 0.25))
         .onAppear(perform: {

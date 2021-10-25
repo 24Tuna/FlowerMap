@@ -12,8 +12,12 @@ struct MainView: View {
     @State var isOpenSideMenu: Bool = false
     @State var isOpenSearch : Bool = false
     @State var isOpenContent : Bool = false
+    
     @State var isPost = false
     @State var isRank = false
+    @State var isCamera = false
+    
+    @State var captureImage : UIImage? = nil
     var body: some View {
         NavigationView{
             ZStack{
@@ -44,7 +48,15 @@ struct MainView: View {
                     //カメラボタン
                     MainMenuButton(buttonName: "カメラ"){
                         // ぼたんの処理をかく
+                        if UIImagePickerController.isSourceTypeAvailable(.camera){
+                            isCamera = true
+                        }else{
+                            
+                        }
                     }
+                    .sheet(isPresented: $isCamera, content: {
+                        ImagePickerView(isCamera: $isCamera, captureImage: $captureImage)
+                    })
                     
                     Spacer()
                     
@@ -52,9 +64,7 @@ struct MainView: View {
                     MainMenuButton(buttonName: "ランク"){
                         isRank = true
                     }
-//                    .fullScreenCover(isPresented: $isRank){
-//                            PostView(isRank: $isRank)
-//                    }
+                    
                     Spacer()
                     
                 }//HStack

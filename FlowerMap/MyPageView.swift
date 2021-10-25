@@ -10,6 +10,7 @@ import SwiftUI
 struct MyPageView: View {
     @State var isMyPhotos = true
     @State var isMyfavorite = false
+//    @Binding var isMypage : Bool
     
     let submission: [MySubmission]
     init() {
@@ -18,6 +19,7 @@ struct MyPageView: View {
             work.append(MySubmission(number: num))
         }
         submission = work
+        
     }
     
     let photoWidth = UIScreen.main.bounds.size.width / 4
@@ -38,6 +40,11 @@ struct MyPageView: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
+                HStack{
+                    Spacer()
+//                    CloseButtonView(isOpen: $isMypage)
+                }
+                
                 HStack {
                     Button(action: {
                         // 投稿一覧表示
