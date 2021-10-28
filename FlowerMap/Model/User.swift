@@ -1,29 +1,29 @@
+////
+////  User.swift
+////  FlowerMap
+////
+////  Created by cmStudent on 2021/10/28.
+////
 //
-//  User.swift
-//  FlowerMap
+//import FirebaseFirestoreSwift
 //
-//  Created by cmStudent on 2021/10/28.
+//struct  User: Identifiable, Decodable {
+//    @DocumentID var id: String?
+//    
+//    let username: String
+//    let email: String
+//    let profileImageUrl: String
+//    let fullname: String
+//    let uid: String
+//    
+//    var stats: UserStats?
+//    var isFollowed: Bool? = false
+//    
+//    var isCurrentUser: Bool { return AuthViewModel.shared.userSession?.uid == id }
+//}
 //
-
-import FirebaseFirestoreSwift
-
-struct  User: Identifiable, Decodable {
-    @DocumentID var id: String?
-    
-    let username: String
-    let email: String
-    let profileImageUrl: String
-    let fullname: String
-    let uid: String
-    
-    var stats: UserStats?
-    var isFollowed: Bool? = false
-    
-    var isCurrentUser: Bool { return AuthViewModel.shared.userSession?.uid == id }
-}
-
-struct UserStats: Decodable {
-    var following: Int
-    var posts: Int
-    var followers: Int
-}
+//struct UserStats: Decodable {
+//    var following: Int
+//    var posts: Int
+//    var followers: Int
+//}

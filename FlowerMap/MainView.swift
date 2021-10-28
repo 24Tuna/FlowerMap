@@ -40,7 +40,7 @@ struct MainView: View {
                         isPost = true
                     }
                     .sheet(isPresented: $isPost,content:{
-//                            PostView(isPost: $isPost,captureImage: $captureImage)
+                            PostView(isPost: $isPost)
                     })
                     
                     Spacer()

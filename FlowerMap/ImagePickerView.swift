@@ -31,8 +31,8 @@ struct ImagePickerView: UIViewControllerRepresentable {
             if let originalImage =
                 info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
                 parent.captureImage = originalImage
-//                $isPost = true
-//                PostView(isPost: $isPost, captureImage: captureImage!)
+                parent.isPost = true
+//                PostView(isPost: parent.$isPost, captureImage: parent.captureImage!)
             }
             
             parent.isCamera = false

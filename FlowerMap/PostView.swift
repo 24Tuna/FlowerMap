@@ -24,6 +24,23 @@ class PostViewModel: ObservableObject {
     
 }
 
+struct ListViewCell: View, Identifiable {
+    let id = UUID()
+    
+    let number : Int
+    
+    let tagName: String
+    
+    var body: some View {
+        
+        VStack {
+            PostTagView(tagText: tagName)
+        }
+        .frame(maxWidth: .infinity)
+    }
+    
+}
+
 struct PostView: View {
     @Binding var isPost : Bool
     //入力中の文字列を保持する状態変数
@@ -47,15 +64,22 @@ struct PostView: View {
     
     let postViewModel = PostViewModel()
     
-    
-    @State var postImage: Image?
-    
-    
-//    let captureImage: UIImage
-//    //投稿する写真(showImage)
-//    @State var postImage:UIImage?
+    var tagName: String
+//    @State var postImage: Image?
     
     
+    @State var captureImage: UIImage?
+    //投稿する写真(showImage)
+    @State var postImage:UIImage?
+    
+    private var list: [ListViewCell] = []
+    init(isPost:Binding<Bool>) {
+        for number in 0...tags.count {
+            tagName = tags[number]
+            list.append(ListViewCell(number: number, tagName: tagName))
+        }
+        self._isPost = isPost
+    }
     
     var body: some View {
         ZStack{
@@ -77,15 +101,15 @@ struct PostView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 300)
                 }.sheet(isPresented: $isShowSheet){
-//                    if isPhotoLibrary{
-//                        PHPickerView(
-//                            isShowSheet: $isShowSheet,
-//                            captureImage: $captureImage)
-//                    }else{
-//                        ImagePickerView(
-//                            isShowSheet: $isShowSheet,
-//                            captureImage: $captureImage)
-//                    }
+                    if isPhotoLibrary{
+                        PHPickerView(
+                            isShowAlbum: $isShowSheet,
+                            captureImage: $captureImage)
+                    }else{
+                        ImagePickerView(
+                            isCamera: $isShowSheet,
+                            captureImage: $captureImage)
+                    }
                 }
                 .actionSheet(isPresented: $isShowAction){
                     ActionSheet(title: Text("確認"),
@@ -103,8 +127,9 @@ struct PostView: View {
                                         isPhotoLibrary = true
                                     }),
                                     .cancel()
-                                ])
-                }
+                                ]//buttons
+                    )//ActionSheet
+                }//actionSheet
                 
                     
                     Spacer()
@@ -119,27 +144,31 @@ struct PostView: View {
                     
                         
                         HStack{
-                            ForEach(0..<tags.count){num in
-                                    
-                                let tag: (isShow: Bool, view: PostTagView) = postViewModel.makeTag(tagName: tags[num], width: windowWidth)
-                                    
-                                if tag.isShow {
-                                    tag.view
-                                }else{
-                                    Button(action: {
-                                        self.isOpenList.toggle()
-                                    }){
-                                        Image(systemName: "list.bullet")
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fit)
-                                            .frame(width: 25)
-                                            .padding()
-                                            .foregroundColor(Color("tagColor"))
-                                    }
-                                    
-                                    
-                                }
-                            }//ForEach
+//                            ForEach(0..<tags.count){num in
+//
+//                                let tag: (isShow: Bool, view: PostTagView) = postViewModel.makeTag(tagName: tags[num], width: windowWidth)
+//
+//                                if tag.isShow {
+//                                    tag.view
+//                                }else{
+//                                    Button(action: {
+//                                        self.isOpenList.toggle()
+//                                    }){
+//                                        Image(systemName: "list.bullet")
+//                                            .resizable()
+//                                            .aspectRatio(contentMode: .fit)
+//                                            .frame(width: 25)
+//                                            .padding()
+//                                            .foregroundColor(Color("tagColor"))
+//                                    }
+//
+//
+//                                }
+//                            }//ForEach
+                            
+                            ForEach(tagsFilter()) { item in
+                                item
+                            }
                             
                         }//HStack
                         
@@ -222,12 +251,26 @@ struct PostView: View {
                 .edgesIgnoringSafeArea(.all)
             }//ZStack
     }//body
+    
+    func tagsFilter() -> [ListViewCell] {
+            var result: [ListViewCell] = []
+
+            list.forEach { item in
+                if item.number > 1000 {
+                    return
+                }
+                result.append(item)
+            }
+            
+            return result
+        }
 }
 
-//struct PostView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PostView(isPost: Binding.constant(true)
-//                 ,captureImage: )
-//    }
-//}
+
+
+struct PostView_Previews: PreviewProvider {
+    static var previews: some View {
+        PostView(isPost: Binding.constant(true))
+    }
+}
 
