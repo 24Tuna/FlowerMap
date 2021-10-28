@@ -88,7 +88,22 @@ struct PostView: View {
 //                    }
                 }
                 .actionSheet(isPresented: $isShowAction){
-                    ActionSheet(title: Text("")）
+                    ActionSheet(title: Text("確認"),
+                                message: Text("選択してください"),
+                                buttons: [
+                                    .default(Text("カメラ"),action: {
+                                        isPhotoLibrary = false
+                                        if UIImagePickerController.isSourceTypeAvailable(.camera){
+                                            isShowSheet = true
+                                        }else{
+                                            print("カメラは利用できません")
+                                        }
+                                    }),
+                                    .default(Text("フォトライブラリー"),action:{
+                                        isPhotoLibrary = true
+                                    }),
+                                    .cancel()
+                                ])
                 }
                 
                     
