@@ -9,18 +9,7 @@ import SwiftUI
 typealias Listcell = View & Identifiable
 
 struct MySubmission: Listcell {
-    
-    
-    @ObservedObject var viewModel: FeedCellViewModel
-    
-    var didLike : Bool { return viewModel.post.didLike ?? false }
-    
-    init(viewModel: FeedCellViewModel) {
-        self.viewModel = viewModel
-    }
-    
-//    使ってないかな？
-//    @State var number: Int
+    @State var number: Int
     let id = UUID()
 
     let mypictureWidth = UIScreen.main.bounds.size.width / 2.5
@@ -39,10 +28,9 @@ struct MySubmission: Listcell {
     
     let Location: String = "位置情報"
     let tags:[String] = ["新宿", "渋谷"]
-    
     var body: some View {
         HStack {
-            PhotoView(post: viewModel.post.imageUrl)
+            PhotoView()
                 .frame(width: mypictureWidth, height: mypictureHeight)
             
             VStack {
@@ -80,8 +68,8 @@ struct MySubmission: Listcell {
     }
 }
 
-//struct MySubmission_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MySubmission(number: 0)
-//    }
-//}
+struct MySubmission_Previews: PreviewProvider {
+    static var previews: some View {
+        MySubmission(number: 0)
+    }
+}

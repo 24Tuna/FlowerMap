@@ -19,7 +19,9 @@ class PostViewModel: ObservableObject {
         } else {
             return (true, tag)
         }
+        
     }
+    
 }
 
 struct PostView: View {
@@ -31,20 +33,13 @@ struct PostView: View {
     
     @State var isOpenList : Bool = false
     
-//    var tags:[String] = ["タグ名","タグ名", "タグタグタグ"]
+    let tags:[String] = ["タグ名","タグ名", "タグタグタグ"]
     
     var sumWidth = 0.0
     let windowWidth = UIScreen.main.bounds.size.width / 1.2
     let windowHeight = UIScreen.main.bounds.size.height / 1.2
     
     let postViewModel = PostViewModel()
-    
-    @State private var selectedImage: UIImage?
-    @State var postImage: Image?
-    @State var tags:[String?]
-    @State var imagePickerPresented = false
-    //    @Binding var tabIndex: Int
-    @ObservedObject var viewModel = UploadPostViewModel()
     
     var body: some View {
         ZStack{
@@ -54,31 +49,19 @@ struct PostView: View {
                 HStack{
                     Spacer()
                     CloseButtonView(isOpen: $isPost)
-                    //                        Button(action: {
-                    //                            isPost = false
-                    //                    }){
-                    //                            Image(systemName:"xmark.circle")
-                    //                                .foregroundColor(Color("buttonColor"))
-                    //                                .font(.largeTitle)
-                    //                        }
+//                        Button(action: {
+//                            isPost = false
+//                    }){
+//                            Image(systemName:"xmark.circle")
+//                                .foregroundColor(Color("buttonColor"))
+//                                .font(.largeTitle)
+//                        }
                 }
-                if postImage == nil {
-                    Button(action: { imagePickerPresented.toggle() }, label: {
-                        Image("picture")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 300)
-                        Spacer()
-                    }).sheet(isPresented: $imagePickerPresented, onDismiss: loadImage, content:{
-                        ImagePicker(image: $selectedImage)
-                    })
-                } else if let image = postImage {
-                    image
+                    Image("picture")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 300)
                     Spacer()
-                }
                     
                     //タグ
                     Group{
@@ -87,11 +70,12 @@ struct PostView: View {
                                 .font(.title)
                             Spacer()
                         }
-                        
+                    
                         HStack{
-                            ForEach(tags) { tag in
-                                let tag: (isShow: Bool, view: PostTagView) = postViewModel.makeTag(tagName: tag, width: windowWidth)
-                                
+                            ForEach(0..<tags.count){num in
+                                    
+                                let tag: (isShow: Bool, view: PostTagView) = postViewModel.makeTag(tagName: tags[num], width: windowWidth)
+                                    
                                 if tag.isShow {
                                     tag.view
                                 }else{
@@ -161,14 +145,8 @@ struct PostView: View {
                     Spacer()
                     
                     Button(action:{
-                        if let image = selectedImage {
-                            viewModel.uploadPost(tag: tag, image: image) { _ in
-                                tag = ""
-                                postImage = nil
-//                                戻り先のview
-                            }
-                        }
-                    }) {
+                        
+                    }){
                         HStack{
                             Image(systemName:"plus.circle")
                                 .resizable()
@@ -181,19 +159,18 @@ struct PostView: View {
                                 .foregroundColor(Color.white)
                                 .padding()
                         }
+                    }
                     .background(Color(red:58/255,green:171/255, blue:210/255))
-                }
-            }//VStack
-            .frame(width: windowWidth, height: windowHeight)
-            .padding()
-            .background(Color("buttonFontColor"))
-        }//ZStack
+                }//VStack
+                .frame(width: windowWidth, height: windowHeight)
+                .padding()
+                .background(Color("buttonFontColor"))
+            }//ZStack
     }//body
 }
 
-extension PostView {
-    func loadImage() {
-        guard  let selectedImage = selectedImage else { return }
-        postImage = Image(uiImage: selectedImage)
+struct PostView_Previews: PreviewProvider {
+    static var previews: some View {
+        PostView(isPost: Binding.constant(true))
     }
 }

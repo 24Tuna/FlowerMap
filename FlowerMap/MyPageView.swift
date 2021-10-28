@@ -6,34 +6,21 @@
 //
 
 import SwiftUI
-import Kingfisher
 
 struct MyPageView: View {
     @State var isMyPhotos = true
     @State var isMyfavorite = false
 //    @Binding var isMypage : Bool
     
-    
-//    let submission: [MySubmission]
-//    init() {
-//        var work: [MySubmission] = []
-//        for num in 0...5 {
-//            work.append(MySubmission(number: num))
-//        }
-//        submission = work
-//
-//    }
-    
-    // Mypage使う時は.profile(uid)をいれてください。
-    let config: PostGridConfiguration
-    @ObservedObject var viewModel: PostGridViewModel
-    
-    init(config: PostGridConfiguration) {
-        self.config = config
+    let submission: [MySubmission]
+    init() {
+        var work: [MySubmission] = []
+        for num in 0...5 {
+            work.append(MySubmission(number: num))
+        }
+        submission = work
         
-        self.viewModel = PostGridViewModel(config: config)
     }
-
     
     let photoWidth = UIScreen.main.bounds.size.width / 4
     let photoHeight = UIScreen.main.bounds.size.height / 10
@@ -102,25 +89,19 @@ struct MyPageView: View {
                     
                 } //HStack
                 ScrollView([.vertical]) {
-                    
-                    ForEach(viewModel.posts) { post in
-                        
-//                        MySubmission(post: post)
+                    ForEach (submission) { num in
+                        num
+                            .padding()
+                            .frame(height: submissionHeight)
                     }
-//                    ForEach (submission) { num in
-//                        num
-//                            .padding()
-//                            .frame(height: submissionHeight)
-//                    }
                 } //ScrollView
             } //VStack
         } //ZStack
     }
 }
 
-//
-//struct MyPageView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MyPageView()
-//    }
-//}
+struct MyPageView_Previews: PreviewProvider {
+    static var previews: some View {
+        MyPageView()
+    }
+}
