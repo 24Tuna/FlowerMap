@@ -26,6 +26,7 @@
 		7F7879F2270EA66E00CD1255 /* MySubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7879F1270EA66E00CD1255 /* MySubmission.swift */; };
 		7F7879F8271006B600CD1255 /* SubmissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7879F7271006B600CD1255 /* SubmissionView.swift */; };
 		7F7C9E1F272A4CF000EA6579 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C9E1E272A4CF000EA6579 /* AuthViewModel.swift */; };
+		7F7C9E21272A4E4B00EA6579 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C9E20272A4E4B00EA6579 /* Constans.swift */; };
 		7F9D3DF42716E6B800D24399 /* RnkingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D3DF32716E6B800D24399 /* RnkingView.swift */; };
 		7F9D3DFA27182F6800D24399 /* TagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D3DF927182F6800D24399 /* TagButton.swift */; };
 		7F9D3DFC27182FFB00D24399 /* Ranking1st.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D3DFB27182FFB00D24399 /* Ranking1st.swift */; };
@@ -60,6 +61,7 @@
 		7F7879F1270EA66E00CD1255 /* MySubmission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySubmission.swift; sourceTree = "<group>"; };
 		7F7879F7271006B600CD1255 /* SubmissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmissionView.swift; sourceTree = "<group>"; };
 		7F7C9E1E272A4CF000EA6579 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		7F7C9E20272A4E4B00EA6579 /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
 		7F9D3DF32716E6B800D24399 /* RnkingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RnkingView.swift; sourceTree = "<group>"; };
 		7F9D3DF927182F6800D24399 /* TagButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagButton.swift; sourceTree = "<group>"; };
 		7F9D3DFB27182FFB00D24399 /* Ranking1st.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking1st.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				7F7C9E1E272A4CF000EA6579 /* AuthViewModel.swift */,
+				7F7C9E20272A4E4B00EA6579 /* Constans.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				7F7879F2270EA66E00CD1255 /* MySubmission.swift in Sources */,
 				7F9D3DFE2718300700D24399 /* Ranking2nd.swift in Sources */,
 				7F9D3E002718301300D24399 /* Ranking3rd.swift in Sources */,
+				7F7C9E21272A4E4B00EA6579 /* Constans.swift in Sources */,
 				7F9D3DF42716E6B800D24399 /* RnkingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
