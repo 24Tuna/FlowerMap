@@ -39,9 +39,9 @@ struct MainView: View {
                         // ぼたんの処理をかく
                         isPost = true
                     }
-                    .fullScreenCover(isPresented: $isPost){
-                            PostView(isPost: $isPost)
-                    }
+                    .sheet(isPresented: $isPost,content:{
+//                            PostView(isPost: $isPost,captureImage: $captureImage)
+                    })
                     
                     Spacer()
                     
@@ -64,7 +64,9 @@ struct MainView: View {
                     MainMenuButton(buttonName: "ランク"){
                         isRank = true
                     }
-                    
+                    .fullScreenCover(isPresented: $isRank){
+                            RnkingView(isRank: $isRank)
+                    }
                     Spacer()
                     
                 }//HStack

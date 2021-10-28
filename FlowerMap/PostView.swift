@@ -32,35 +32,66 @@ struct PostView: View {
     @State var postAddress = ""
     
     @State var isOpenList : Bool = false
+    @State var isAddTag : Bool = false
     
-    let tags:[String] = ["タグ名","タグ名", "タグタグタグ"]
+    @State var isShowSheet = false
+    @State var isPhotoLibrary = false
+    @State var isShowAction = false
+    
+    let tags:[String] = ["タグ名","タグ名", "タグタグタグ","test"]
     
     var sumWidth = 0.0
     let windowWidth = UIScreen.main.bounds.size.width / 1.2
     let windowHeight = UIScreen.main.bounds.size.height / 1.2
+   
     
     let postViewModel = PostViewModel()
+    
+    
+    @State var postImage: Image?
+    
+    
+//    let captureImage: UIImage
+//    //投稿する写真(showImage)
+//    @State var postImage:UIImage?
+    
+    
     
     var body: some View {
         ZStack{
             Color("backColor")
                 .edgesIgnoringSafeArea(.all)
             VStack{
+                
                 HStack{
                     Spacer()
                     CloseButtonView(isOpen: $isPost)
-//                        Button(action: {
-//                            isPost = false
-//                    }){
-//                            Image(systemName:"xmark.circle")
-//                                .foregroundColor(Color("buttonColor"))
-//                                .font(.largeTitle)
-//                        }
                 }
+                
+                Button(action: {
+                    isShowAction = true
+                }){
+                    
                     Image("picture")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 300)
+                }.sheet(isPresented: $isShowSheet){
+//                    if isPhotoLibrary{
+//                        PHPickerView(
+//                            isShowSheet: $isShowSheet,
+//                            captureImage: $captureImage)
+//                    }else{
+//                        ImagePickerView(
+//                            isShowSheet: $isShowSheet,
+//                            captureImage: $captureImage)
+//                    }
+                }
+                .actionSheet(isPresented: $isShowAction){
+                    ActionSheet(title: Text(""))
+                }
+                
+                    
                     Spacer()
                     
                     //タグ
@@ -71,6 +102,7 @@ struct PostView: View {
                             Spacer()
                         }
                     
+                        
                         HStack{
                             ForEach(0..<tags.count){num in
                                     
@@ -89,9 +121,12 @@ struct PostView: View {
                                             .padding()
                                             .foregroundColor(Color("tagColor"))
                                     }
+                                    
+                                    
                                 }
                             }//ForEach
-                        }
+                            
+                        }//HStack
                         
                         Spacer()
                             .frame(height:20)
@@ -99,6 +134,7 @@ struct PostView: View {
                         HStack{
                             Button(action: {
                                 ///TODO:タグの追加処理を書く
+                                self.isAddTag.toggle()
                             }){
                                 HStack{
                                     Image(systemName: "plus")
@@ -114,7 +150,7 @@ struct PostView: View {
                             .background(Color(.white))
                             
                             Spacer()
-                        }
+                        }//HStack
                     }//Group
                     
                     Spacer()
@@ -165,12 +201,18 @@ struct PostView: View {
                 .frame(width: windowWidth, height: windowHeight)
                 .padding()
                 .background(Color("buttonFontColor"))
+            TagManegerListView(isOpenList: $isOpenList)
+                .edgesIgnoringSafeArea(.all)
+            AddTagView(isAddTag: $isAddTag)
+                .edgesIgnoringSafeArea(.all)
             }//ZStack
     }//body
 }
 
-struct PostView_Previews: PreviewProvider {
-    static var previews: some View {
-        PostView(isPost: Binding.constant(true))
-    }
-}
+//struct PostView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PostView(isPost: Binding.constant(true)
+//                 ,captureImage: )
+//    }
+//}
+

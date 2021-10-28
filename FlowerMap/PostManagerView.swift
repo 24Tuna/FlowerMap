@@ -32,6 +32,7 @@ struct PostManagerView: View {
     
     @State var good = "100"
     @State var isOpenList : Bool = false
+    @State var isAddTag : Bool = false
     let tags:[String] = ["タグ名","タグ名", "タグタグタグ"]
     
     let windowWidth = UIScreen.main.bounds.size.width / 1.2
@@ -99,6 +100,7 @@ struct PostManagerView: View {
                     HStack{
                         Button(action: {
                             ///TODO:タグの追加処理を書く
+                            self.isAddTag.toggle()
                         }){
                             HStack{
                                 Image(systemName: "plus")
@@ -114,7 +116,7 @@ struct PostManagerView: View {
                         .background(Color(.white))
                         
                         Spacer()
-                    }
+                    }//HStack
                 }
                 
                 Spacer()

@@ -47,8 +47,8 @@ struct SideMenuView: View {
                         self.isShowAction.toggle()
                         self.isOpenSideMenu = false
                     }
-                    .sheet(isPresented:$isShowAction){
-                        
+                    .fullScreenCover(isPresented:$isShowAction){
+                        MyPageView(isShowAction: $isShowAction)
                     }
                     
                     SideMenuButton(buttonName: "検索"){

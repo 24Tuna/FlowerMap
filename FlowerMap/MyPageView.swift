@@ -10,15 +10,17 @@ import SwiftUI
 struct MyPageView: View {
     @State var isMyPhotos = true
     @State var isMyfavorite = false
-//    @Binding var isMypage : Bool
+    @Binding var isShowAction : Bool
     
     let submission: [MySubmission]
-    init() {
+    init(isShowAction: Binding<Bool>) {
         var work: [MySubmission] = []
         for num in 0...5 {
             work.append(MySubmission(number: num))
         }
         submission = work
+        
+        self._isShowAction = isShowAction
         
     }
     
@@ -42,7 +44,9 @@ struct MyPageView: View {
             VStack {
                 HStack{
                     Spacer()
-//                    CloseButtonView(isOpen: $isMypage)
+                    CloseButtonView(isOpen: $isShowAction)
+                    Spacer()
+                        .frame(width:20)
                 }
                 
                 HStack {
@@ -102,6 +106,6 @@ struct MyPageView: View {
 
 struct MyPageView_Previews: PreviewProvider {
     static var previews: some View {
-        MyPageView()
+        MyPageView(isShowAction: .constant(true))
     }
 }
