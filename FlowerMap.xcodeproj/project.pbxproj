@@ -25,6 +25,7 @@
 		7F6C075A2717C291007397C9 /* PostManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6C07592717C291007397C9 /* PostManagerView.swift */; };
 		7F7879F2270EA66E00CD1255 /* MySubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7879F1270EA66E00CD1255 /* MySubmission.swift */; };
 		7F7879F8271006B600CD1255 /* SubmissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7879F7271006B600CD1255 /* SubmissionView.swift */; };
+		7F7C9E1F272A4CF000EA6579 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C9E1E272A4CF000EA6579 /* AuthViewModel.swift */; };
 		7F9D3DF42716E6B800D24399 /* RnkingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D3DF32716E6B800D24399 /* RnkingView.swift */; };
 		7F9D3DFA27182F6800D24399 /* TagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D3DF927182F6800D24399 /* TagButton.swift */; };
 		7F9D3DFC27182FFB00D24399 /* Ranking1st.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D3DFB27182FFB00D24399 /* Ranking1st.swift */; };
@@ -58,12 +59,12 @@
 		7F6C07592717C291007397C9 /* PostManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostManagerView.swift; sourceTree = "<group>"; };
 		7F7879F1270EA66E00CD1255 /* MySubmission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySubmission.swift; sourceTree = "<group>"; };
 		7F7879F7271006B600CD1255 /* SubmissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmissionView.swift; sourceTree = "<group>"; };
+		7F7C9E1E272A4CF000EA6579 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		7F9D3DF32716E6B800D24399 /* RnkingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RnkingView.swift; sourceTree = "<group>"; };
 		7F9D3DF927182F6800D24399 /* TagButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagButton.swift; sourceTree = "<group>"; };
 		7F9D3DFB27182FFB00D24399 /* Ranking1st.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking1st.swift; sourceTree = "<group>"; };
 		7F9D3DFD2718300700D24399 /* Ranking2nd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking2nd.swift; sourceTree = "<group>"; };
 		7F9D3DFF2718301300D24399 /* Ranking3rd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking3rd.swift; sourceTree = "<group>"; };
-		7FB18B0A270A9D110010875D /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		7FD00517272669FA003CFDC1 /* AddTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTagView.swift; sourceTree = "<group>"; };
 		7FD0051C2726A190003CFDC1 /* PHPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPickerView.swift; sourceTree = "<group>"; };
 		7FD696B2272112A200C39E2E /* Ranking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking.swift; sourceTree = "<group>"; };
@@ -128,6 +129,7 @@
 				7FF50F2827226B5600F846EB /* MyPageView.swift */,
 				7F1678F52722BC76006B634F /* ImagePickerView.swift */,
 				7FD0051C2726A190003CFDC1 /* PHPickerView.swift */,
+				7F7C9E1D272A4C5A00EA6579 /* Auth */,
 				7F3B860226A5773000B77A5D /* Assets.xcassets */,
 				7F3B860726A5773000B77A5D /* Info.plist */,
 				7F3B860426A5773000B77A5D /* Preview Content */,
@@ -146,9 +148,16 @@
 		7F4B830927226929000014DB /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				7FB18B0A270A9D110010875D /* MyPageView.swift */,
 			);
 			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		7F7C9E1D272A4C5A00EA6579 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				7F7C9E1E272A4CF000EA6579 /* AuthViewModel.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +246,7 @@
 				7F561A2B27210CD1001972B0 /* CloseButtonView.swift in Sources */,
 				7F9D3DFA27182F6800D24399 /* TagButton.swift in Sources */,
 				7F511A33270AC2AF0094299C /* SideMenuButton.swift in Sources */,
+				7F7C9E1F272A4CF000EA6579 /* AuthViewModel.swift in Sources */,
 				7F115A0F2713FE4C0090EC86 /* PostView.swift in Sources */,
 				7FD0051D2726A190003CFDC1 /* PHPickerView.swift in Sources */,
 				7F7879F8271006B600CD1255 /* SubmissionView.swift in Sources */,
