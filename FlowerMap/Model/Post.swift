@@ -10,10 +10,7 @@ import Firebase
 
 struct Post: Identifiable,Decodable {
     @DocumentID var id: String?
-    let ownerUid: String        // 投稿者のID
-    let ownerUsername: String   // 投稿者のユーザーネーム
-    let ownerImageUrl: String   // 投稿者のアイコン画像のURL
-    
+    let ownerUid: String        // 投稿者のID    
     var likes: Int              // 投稿についたいいねの数
     let imageUrl: String        // 投稿された画像のURL
     let timestamp: Timestamp    // 投稿時間
