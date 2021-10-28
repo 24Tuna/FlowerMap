@@ -88,7 +88,7 @@ struct PostView: View {
 //                    }
                 }
                 .actionSheet(isPresented: $isShowAction){
-                    ActionSheet(title: Text(""))
+                    ActionSheet(title: Text("")）
                 }
                 
                     
