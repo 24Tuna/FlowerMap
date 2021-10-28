@@ -6,13 +6,20 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct FlowerMapApp: App {
+    
+    init() {
+        FirebaseApp.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
             //MainView()
-            PostManagerView()
+//            PostManagerView()
+            PostView(isPost: Binding.constant(true))
         }
     }
 }
