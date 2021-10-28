@@ -30,6 +30,9 @@
 		7F80F18C272A510400893C07 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F80F18B272A510400893C07 /* Post.swift */; };
 		7F80F18F272A510B00893C07 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F80F18E272A510B00893C07 /* Tag.swift */; };
 		7F80F192272A511400893C07 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F80F191272A511400893C07 /* User.swift */; };
+		7F80F1CE272B3A5200893C07 /* TagCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F80F1CD272B3A5200893C07 /* TagCellViewModel.swift */; };
+		7F80F1D2272B3A9B00893C07 /* TagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F80F1D1272B3A9B00893C07 /* TagViewModel.swift */; };
+		7F80F1D6272B3B7100893C07 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F80F1D5272B3B7100893C07 /* ImageUploader.swift */; };
 		7F9D3DF42716E6B800D24399 /* RnkingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D3DF32716E6B800D24399 /* RnkingView.swift */; };
 		7F9D3DFA27182F6800D24399 /* TagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D3DF927182F6800D24399 /* TagButton.swift */; };
 		7F9D3DFC27182FFB00D24399 /* Ranking1st.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D3DFB27182FFB00D24399 /* Ranking1st.swift */; };
@@ -69,6 +72,9 @@
 		7F80F18B272A510400893C07 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		7F80F18E272A510B00893C07 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		7F80F191272A511400893C07 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7F80F1CD272B3A5200893C07 /* TagCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCellViewModel.swift; sourceTree = "<group>"; };
+		7F80F1D1272B3A9B00893C07 /* TagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewModel.swift; sourceTree = "<group>"; };
+		7F80F1D5272B3B7100893C07 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		7F9D3DF32716E6B800D24399 /* RnkingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RnkingView.swift; sourceTree = "<group>"; };
 		7F9D3DF927182F6800D24399 /* TagButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagButton.swift; sourceTree = "<group>"; };
 		7F9D3DFB27182FFB00D24399 /* Ranking1st.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking1st.swift; sourceTree = "<group>"; };
@@ -114,6 +120,9 @@
 			isa = PBXGroup;
 			children = (
 				7F80F189272A50F700893C07 /* Model */,
+				7F80F1CB272B39F800893C07 /* ViewModel */,
+				7F80F1D4272B3B2900893C07 /* API */,
+				7F7C9E1D272A4C5A00EA6579 /* Auth */,
 				7F3B85FE26A5772F00B77A5D /* FlowerMapApp.swift */,
 				7F3B860026A5772F00B77A5D /* MainView.swift */,
 				7F7879F1270EA66E00CD1255 /* MySubmission.swift */,
@@ -141,7 +150,6 @@
 				7FF50F2827226B5600F846EB /* MyPageView.swift */,
 				7F1678F52722BC76006B634F /* ImagePickerView.swift */,
 				7FD0051C2726A190003CFDC1 /* PHPickerView.swift */,
-				7F7C9E1D272A4C5A00EA6579 /* Auth */,
 				7F3B860226A5773000B77A5D /* Assets.xcassets */,
 				7F3B860726A5773000B77A5D /* Info.plist */,
 				7F3B860426A5773000B77A5D /* Preview Content */,
@@ -181,6 +189,31 @@
 				7F80F18E272A510B00893C07 /* Tag.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7F80F1CB272B39F800893C07 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7F80F1CC272B3A2100893C07 /* Tag */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7F80F1CC272B3A2100893C07 /* Tag */ = {
+			isa = PBXGroup;
+			children = (
+				7F80F1D1272B3A9B00893C07 /* TagViewModel.swift */,
+				7F80F1CD272B3A5200893C07 /* TagCellViewModel.swift */,
+			);
+			path = Tag;
+			sourceTree = "<group>";
+		};
+		7F80F1D4272B3B2900893C07 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				7F80F1D5272B3B7100893C07 /* ImageUploader.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,8 +298,10 @@
 				7F80F192272A511400893C07 /* User.swift in Sources */,
 				7F1678F62722BC76006B634F /* ImagePickerView.swift in Sources */,
 				7F3B85FF26A5772F00B77A5D /* FlowerMapApp.swift in Sources */,
+				7F80F1D6272B3B7100893C07 /* ImageUploader.swift in Sources */,
 				7F3EAE8327056425000A8110 /* SideMenuView.swift in Sources */,
 				7F115A0B2713FBD00090EC86 /* MainMenuButton.swift in Sources */,
+				7F80F1CE272B3A5200893C07 /* TagCellViewModel.swift in Sources */,
 				7F6C075A2717C291007397C9 /* PostManagerView.swift in Sources */,
 				7F561A3127211BEB001972B0 /* ContentView.swift in Sources */,
 				7F511A37270AE8120094299C /* SearchMenuButton.swift in Sources */,
@@ -278,6 +313,7 @@
 				7F9D3DFA27182F6800D24399 /* TagButton.swift in Sources */,
 				7F511A33270AC2AF0094299C /* SideMenuButton.swift in Sources */,
 				7F7C9E1F272A4CF000EA6579 /* AuthViewModel.swift in Sources */,
+				7F80F1D2272B3A9B00893C07 /* TagViewModel.swift in Sources */,
 				7F115A0F2713FE4C0090EC86 /* PostView.swift in Sources */,
 				7FE3D350272A7CC300B86371 /* PostScrollView.swift in Sources */,
 				7FD0051D2726A190003CFDC1 /* PHPickerView.swift in Sources */,

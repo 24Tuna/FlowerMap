@@ -11,7 +11,7 @@
 //struct Tag: Identifiable,Decodable {
 //    @DocumentID var id: String?
 //    let name: String
+//    let searchName: String
 //    let type: String
-//
 //}
-//
+
