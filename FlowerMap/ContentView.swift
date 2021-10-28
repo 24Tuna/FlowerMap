@@ -7,6 +7,22 @@
 
 import SwiftUI
 
+//struct ListViewCell: View, Identifiable {
+//    let id = UUID()
+//    
+//    let number : Int
+//    
+//    let tagName: String
+//    
+//    var body: some View {
+//        
+//        VStack {
+//            PostTagView(tagText: tagName)
+//        }
+//    }
+//    
+//}
+
 struct ContentView: View {
     @Binding var isOpenContent: Bool
     
@@ -42,11 +58,13 @@ struct ContentView: View {
                         Spacer()
                     }
                 
-                    HStack{
-                        ForEach(0..<tags.count){num in
-                            PostTagView(tagText: tags[num])
-                        }
-                    }
+//                    ScrollView(.horizontal){
+//                        HStack{
+//                            ForEach(tagsFilter()) { item in
+//                                item
+//                            }
+//                        }
+//                    }
                     
                 }
                 
@@ -91,6 +109,14 @@ struct ContentView: View {
             .background(Color("buttonFontColor"))
         }
     }
+    
+//    func tagsFilter() -> [ListViewCell] {
+//        var result: [ListViewCell] = []
+//            list.forEach { item in
+//                result.append(item)
+//            }
+//        return result
+//    }
 }
 
 struct ContentView_Previews: PreviewProvider {

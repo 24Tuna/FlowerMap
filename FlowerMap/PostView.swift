@@ -7,39 +7,38 @@
 import UIKit
 import SwiftUI
 
-class PostViewModel: ObservableObject {
-    var sum: CGFloat = 0
-    
-    func makeTag(tagName: String, width: CGFloat) -> (isShow: Bool, view: PostTagView){
-        let tag = PostTagView(tagText: tagName)
-        sum += tag.fontWidth + 80
-        
-        if sum > width - 25 {
-            return (false, tag)
-        } else {
-            return (true, tag)
-        }
-        
-    }
-    
-}
+//class PostViewModel: ObservableObject {
+//    var sum: CGFloat = 0
+//
+//    func makeTag(tagName: String, width: CGFloat) -> (isShow: Bool, view: PostTagView){
+//        let tag = PostTagView(tagText: tagName)
+//        sum += tag.fontWidth + 80
+//
+//        if sum > width - 25 {
+//            return (false, tag)
+//        } else {
+//            return (true, tag)
+//        }
+//
+//    }
+//
+//}
 
-struct ListViewCell: View, Identifiable {
-    let id = UUID()
-    
-    let number : Int
-    
-    let tagName: String
-    
-    var body: some View {
-        
-        VStack {
-            PostTagView(tagText: tagName)
-        }
-        .frame(maxWidth: .infinity)
-    }
-    
-}
+//struct ListViewCell: View, Identifiable {
+//    let id = UUID()
+//
+//    let number : Int
+//
+//    let tagName: String
+//
+//    var body: some View {
+//
+//        VStack {
+//            PostTagView(tagText: tagName)
+//        }
+//    }
+//
+//}
 
 struct PostView: View {
     @Binding var isPost : Bool
@@ -60,11 +59,9 @@ struct PostView: View {
     var sumWidth = 0.0
     let windowWidth = UIScreen.main.bounds.size.width / 1.2
     let windowHeight = UIScreen.main.bounds.size.height / 1.2
-   
     
-    let postViewModel = PostViewModel()
-    
-    var tagName: String
+    var tagName: String = ""
+    var number:Int = 0
 //    @State var postImage: Image?
     
     
@@ -72,14 +69,14 @@ struct PostView: View {
     //投稿する写真(showImage)
     @State var postImage:UIImage?
     
-    private var list: [ListViewCell] = []
-    init(isPost:Binding<Bool>) {
-        for number in 0...tags.count {
-            tagName = tags[number]
-            list.append(ListViewCell(number: number, tagName: tagName))
-        }
-        self._isPost = isPost
-    }
+//    private var list: [ListViewCell] = []
+//    init(isPost:Binding<Bool>) {
+//        for number in 0..<tags.count {
+//            tagName = tags[number]
+//            list.append(ListViewCell(number: number, tagName: tagName))
+//        }
+//        self._isPost = isPost
+//    }
     
     var body: some View {
         ZStack{
@@ -141,36 +138,18 @@ struct PostView: View {
                                 .font(.title)
                             Spacer()
                         }
-                    
                         
-                        HStack{
-//                            ForEach(0..<tags.count){num in
-//
-//                                let tag: (isShow: Bool, view: PostTagView) = postViewModel.makeTag(tagName: tags[num], width: windowWidth)
-//
-//                                if tag.isShow {
-//                                    tag.view
-//                                }else{
-//                                    Button(action: {
-//                                        self.isOpenList.toggle()
-//                                    }){
-//                                        Image(systemName: "list.bullet")
-//                                            .resizable()
-//                                            .aspectRatio(contentMode: .fit)
-//                                            .frame(width: 25)
-//                                            .padding()
-//                                            .foregroundColor(Color("tagColor"))
-//                                    }
-//
-//
+                        PostScrollView()
+                    
+//                        ScrollView(.horizontal){
+//                            HStack{
+//                                ForEach(tagsFilter()) { item in
+//                                    item
 //                                }
-//                            }//ForEach
+//                            }
+//                        }
                             
-                            ForEach(tagsFilter()) { item in
-                                item
-                            }
-                            
-                        }//HStack
+                        
                         
                         Spacer()
                             .frame(height:20)
@@ -252,18 +231,36 @@ struct PostView: View {
             }//ZStack
     }//body
     
-    func tagsFilter() -> [ListViewCell] {
-            var result: [ListViewCell] = []
-
-            list.forEach { item in
-                if item.number > 1000 {
-                    return
-                }
-                result.append(item)
-            }
-            
-            return result
-        }
+//    func tagsFilter() -> [ListViewCell] {
+//            var result: [ListViewCell] = []
+//
+//            list.forEach { item in
+//
+//                if tag.isShow {
+//                    tag.view
+//                }else{
+//                    Button(action: {
+//                        self.isOpenList.toggle()
+//                    }){
+//                        Image(systemName: "list.bullet")
+//                            .resizable()
+//                            .aspectRatio(contentMode: .fit)
+//                            .frame(width: 25)
+//                            .padding()
+//                            .foregroundColor(Color("tagColor"))
+//                    }
+//                    return
+//                }
+//
+//                if Double(windowWidth) < sumWidth {
+//                    return
+//                }
+//
+//                result.append(item)
+//            }
+//
+//            return result
+//        }
 }
 
 

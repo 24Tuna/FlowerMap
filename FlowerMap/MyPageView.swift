@@ -92,7 +92,7 @@ struct MyPageView: View {
                     .padding()
                     
                 } //HStack
-                ScrollView([.vertical]) {
+                ScrollView(.vertical) {
                     ForEach (submission) { num in
                         num
                             .padding()
