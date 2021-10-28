@@ -27,6 +27,9 @@
 		7F7879F8271006B600CD1255 /* SubmissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7879F7271006B600CD1255 /* SubmissionView.swift */; };
 		7F7C9E1F272A4CF000EA6579 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C9E1E272A4CF000EA6579 /* AuthViewModel.swift */; };
 		7F7C9E21272A4E4B00EA6579 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C9E20272A4E4B00EA6579 /* Constans.swift */; };
+		7F80F18C272A510400893C07 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F80F18B272A510400893C07 /* Post.swift */; };
+		7F80F18F272A510B00893C07 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F80F18E272A510B00893C07 /* Tag.swift */; };
+		7F80F192272A511400893C07 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F80F191272A511400893C07 /* User.swift */; };
 		7F9D3DF42716E6B800D24399 /* RnkingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D3DF32716E6B800D24399 /* RnkingView.swift */; };
 		7F9D3DFA27182F6800D24399 /* TagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D3DF927182F6800D24399 /* TagButton.swift */; };
 		7F9D3DFC27182FFB00D24399 /* Ranking1st.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D3DFB27182FFB00D24399 /* Ranking1st.swift */; };
@@ -62,6 +65,9 @@
 		7F7879F7271006B600CD1255 /* SubmissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmissionView.swift; sourceTree = "<group>"; };
 		7F7C9E1E272A4CF000EA6579 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		7F7C9E20272A4E4B00EA6579 /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
+		7F80F18B272A510400893C07 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		7F80F18E272A510B00893C07 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		7F80F191272A511400893C07 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7F9D3DF32716E6B800D24399 /* RnkingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RnkingView.swift; sourceTree = "<group>"; };
 		7F9D3DF927182F6800D24399 /* TagButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagButton.swift; sourceTree = "<group>"; };
 		7F9D3DFB27182FFB00D24399 /* Ranking1st.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking1st.swift; sourceTree = "<group>"; };
@@ -105,6 +111,7 @@
 		7F3B85FD26A5772F00B77A5D /* FlowerMap */ = {
 			isa = PBXGroup;
 			children = (
+				7F80F189272A50F700893C07 /* Model */,
 				7F3B85FE26A5772F00B77A5D /* FlowerMapApp.swift */,
 				7F3B860026A5772F00B77A5D /* MainView.swift */,
 				7F7879F1270EA66E00CD1255 /* MySubmission.swift */,
@@ -161,6 +168,16 @@
 				7F7C9E20272A4E4B00EA6579 /* Constans.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		7F80F189272A50F700893C07 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7F80F191272A511400893C07 /* User.swift */,
+				7F80F18B272A510400893C07 /* Post.swift */,
+				7F80F18E272A510B00893C07 /* Tag.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +253,7 @@
 				7F9D3DFC27182FFB00D24399 /* Ranking1st.swift in Sources */,
 				7FD696B3272112A200C39E2E /* Ranking.swift in Sources */,
 				7FFF0BB0271D3ED1002C5A05 /* PhotoView.swift in Sources */,
+				7F80F192272A511400893C07 /* User.swift in Sources */,
 				7F1678F62722BC76006B634F /* ImagePickerView.swift in Sources */,
 				7F3B85FF26A5772F00B77A5D /* FlowerMapApp.swift in Sources */,
 				7F3EAE8327056425000A8110 /* SideMenuView.swift in Sources */,
@@ -244,6 +262,7 @@
 				7F561A3127211BEB001972B0 /* ContentView.swift in Sources */,
 				7F511A37270AE8120094299C /* SearchMenuButton.swift in Sources */,
 				7FF50F2927226B5600F846EB /* MyPageView.swift in Sources */,
+				7F80F18F272A510B00893C07 /* Tag.swift in Sources */,
 				7F561A282720FF19001972B0 /* TagManegerListView.swift in Sources */,
 				7F4A35412713D72600AFF0D1 /* CaptionView.swift in Sources */,
 				7F561A2B27210CD1001972B0 /* CloseButtonView.swift in Sources */,
@@ -254,6 +273,7 @@
 				7FD0051D2726A190003CFDC1 /* PHPickerView.swift in Sources */,
 				7F7879F8271006B600CD1255 /* SubmissionView.swift in Sources */,
 				7FD00518272669FA003CFDC1 /* AddTagView.swift in Sources */,
+				7F80F18C272A510400893C07 /* Post.swift in Sources */,
 				7F5FAD58271AA03400292578 /* PostTagView.swift in Sources */,
 				7F7879F2270EA66E00CD1255 /* MySubmission.swift in Sources */,
 				7F9D3DFE2718300700D24399 /* Ranking2nd.swift in Sources */,
