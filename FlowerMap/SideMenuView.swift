@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct SideMenuView: View {
+    // レイアウト
+    let spacer_Width = UIScreen.main.bounds.size.width / 2.5
+    let scrollHeight = UIScreen.main.bounds.size.height / 1.8
+    let animation_Width = 270
+    
+    
     @Binding var isOpenSideMenu : Bool
     @Binding var isOpenSearch : Bool
     //ActionSheetのsheet
@@ -18,15 +24,9 @@ struct SideMenuView: View {
     //検索キーワードを保持する状態変数
     @State var dispSearchKey = ""
     
-    //FIXME:後でデータベースに差し替える
-    let springFlos:[String] = [""]
-    let summerFlos:[String] = [""]
-    let fallFlos:[String] = [""]
-    let winterFlos:[String] = ["ツバキ"]
+    @ObservedObject var viewModel = TagViewModel()
     
-    let spacer_Width = UIScreen.main.bounds.size.width / 2.5
-    let scrollHeight = UIScreen.main.bounds.size.height / 1.8
-    let animation_Width = 270
+
     
     var body: some View {
         
@@ -68,30 +68,34 @@ struct SideMenuView: View {
                         .animation(.easeIn(duration: 0.25))
                 
                         CaptionView(capText:"春")
-                        ForEach(0..<springFlos.count){ num in
-                                SearchMenuButton(buttonName: springFlos[num]){
-                                    
-                                }
+                        ForEach(viewModel.tags) { tag in
+                            
+                            if tag.type == "spring" {
+                                TagCell(tag: tag)
                             }
+                        }
                         
                         CaptionView(capText:"夏")
-                        ForEach(0..<summerFlos.count){ num in
-                            SearchMenuButton(buttonName: summerFlos[num]){
-                                
+                        ForEach(viewModel.tags) { tag in
+                            
+                            if tag.type == "summer" {
+                                TagCell(tag: tag)
                             }
                         }
 
                         CaptionView(capText:"秋")
-                        ForEach(0..<fallFlos.count){ num in
-                            SearchMenuButton(buttonName: fallFlos[num]){
-                                
+                        ForEach(viewModel.tags) { tag in
+                            
+                            if tag.type == "autumn" {
+                                TagCell(tag: tag)
                             }
                         }
                         
                         CaptionView(capText:"冬")
-                        ForEach(0..<winterFlos.count){ num in
-                            SearchMenuButton(buttonName: winterFlos[num]){
-                                
+                        ForEach(viewModel.tags) { tag in
+                            
+                            if tag.type == "winter" {
+                                TagCell(tag: tag)
                             }
                         }
                     }//ScrollView

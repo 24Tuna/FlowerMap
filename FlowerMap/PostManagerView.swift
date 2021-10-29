@@ -27,11 +27,11 @@ struct PostManagerView: View {
 //    @State var isAddTag : Bool = false
     
     
-//    @ObservedObject var viewModel: DeletePostViewModel
-//
-//    init(viewModel: ControlPostCellViewModel) {
-//        self.viewModel = viewModel
-//    }
+    @ObservedObject var viewModel: ControlPostCellViewModel
+
+    init(viewModel: ControlPostCellViewModel) {
+        self.viewModel = viewModel
+    }
     
     var body: some View {
         ZStack{
@@ -53,9 +53,9 @@ struct PostManagerView: View {
                 
                 
                 // 投稿された画像
-//                KFImage(URL(string: viewModel.post.imageUrl))
-//                    .resizable()
-//                    .aspectRatio(contentMode: .fit)
+                KFImage(URL(string: viewModel.post.imageUrl))
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
                     .frame(height:250)
                 
                 
@@ -108,7 +108,7 @@ struct PostManagerView: View {
                     }
                     
                     //修正間に合わなければ
-//                    Text(viewModel.post.location)
+                    Text(verbatim: viewModel.post.location)
                     
 //                    修正間に合えば
 //                    TextField("住所",text:$inputAddress,onCommit:{
@@ -171,7 +171,7 @@ struct PostManagerView: View {
                     secondaryButton: .destructive(Text("削除"),
 //                    ↓ここに削除する処理を書く
                     action: {
-//                        viewModel.deletePost()
+                        viewModel.deletePost()
                     }))
                 }
             }//VStack
@@ -184,9 +184,9 @@ struct PostManagerView: View {
         }//ZStack
     }
 }
-
-struct PostManagerView_Previews: PreviewProvider {
-    static var previews: some View {
-        PostManagerView()
-    }
-}
+//
+//struct PostManagerView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PostManagerView()
+//    }
+//}

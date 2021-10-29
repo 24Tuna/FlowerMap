@@ -14,10 +14,11 @@ struct AddTagView: View {
     
     @State var isTagList = false
     @Binding var tagsArray: [String]    // タグの配列
+    @State var searchText = ""          // タグ検索のテキスト
     
     @Binding var isAddTag:Bool
     
-//    @ObservedObject var viewModel: TagViewModel
+    @ObservedObject var viewModel: TagViewModel
     
     var body: some View {
         ZStack{
@@ -48,11 +49,10 @@ struct AddTagView: View {
                 if isTagList {
 //                     レイアウトの修正お願いします
                     
-//                    TagListView(viewModel: tagViewModel,
-//                                searchTagText: $searchText,
-//                                tagName: $tag, isTagList: $isTagList)
-//                        .frame(width: 140, height: 140)
-//                        .background(Color.white)
+                    TagListView(viewModel: viewModel,
+                                tagName: $tag, searchTagText: $searchText, isTagList: $isTagList)
+                        .frame(width: 140, height: 140)
+                        .background(Color.white)
                 }
                 
                 

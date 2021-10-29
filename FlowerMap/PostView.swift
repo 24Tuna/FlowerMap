@@ -20,6 +20,8 @@ struct PostView: View {
     //検索キーワードを保持する状態変数
     @State var postAddress = ""
     
+    @State var location = ""
+    
     @State var isOpenList : Bool = false    // マップを開く
     @State var isAddTag : Bool = false      // タグ追加画面を開く
     
@@ -31,7 +33,9 @@ struct PostView: View {
     
     @State var tags:[String] = []
     
-    
+    @ObservedObject var viewModel = UploadPostViewModel()
+    @ObservedObject var tagViewModel = TagViewModel()
+
     
     var tagName: String = ""
     var number:Int = 0
@@ -208,9 +212,9 @@ struct PostView: View {
                             .default(Text("投稿"),
                                      action: {
                                         if let image = selectedImage {
-//                                            viewModel.uploadPost(tags: tags, location: location, image: image) { _ in
-//                                                postImage = nil
-//                                            }
+                                            viewModel.uploadPost(tags: tags, location: location, image: image) { _ in
+                                                postImage = nil
+                                            }
                                         }
                                      }))
 
@@ -225,7 +229,7 @@ struct PostView: View {
             TagManegerListView(isOpenList: $isOpenList)
                 .edgesIgnoringSafeArea(.all)
             
-            AddTagView(tagsArray: $tags, isAddTag: $isAddTag)
+            AddTagView(tagsArray: $tags, isAddTag: $isAddTag, viewModel: tagViewModel)
                 .edgesIgnoringSafeArea(.all)
         }//ZStack
     }//body
