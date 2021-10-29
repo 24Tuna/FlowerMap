@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import Kingfisher
 
 
 struct PostManagerView: View {
@@ -26,7 +26,8 @@ struct PostManagerView: View {
 //    @State var isOpenList : Bool = false
 //    @State var isAddTag : Bool = false
     
-//    @ObservedObject var viewModel: ControlPostCellViewModel
+    
+//    @ObservedObject var viewModel: DeletePostViewModel
 //
 //    init(viewModel: ControlPostCellViewModel) {
 //        self.viewModel = viewModel
@@ -37,6 +38,8 @@ struct PostManagerView: View {
             Color("backColor")
                 .edgesIgnoringSafeArea(.all)
             VStack{
+                
+                // 閉じるボタン
                 HStack{
                     Spacer()
                     Button(action: {
@@ -47,10 +50,15 @@ struct PostManagerView: View {
                             .font(.largeTitle)
                     }
                 }
-                Image("picture")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
+                
+                
+                // 投稿された画像
+//                KFImage(URL(string: viewModel.post.imageUrl))
+//                    .resizable()
+//                    .aspectRatio(contentMode: .fit)
                     .frame(height:250)
+                
+                
                 Spacer()
                 
                 //タグ
@@ -61,7 +69,6 @@ struct PostManagerView: View {
                         Spacer()
                             
                     }
-                    
                     
                     PostScrollView()
                     
@@ -99,12 +106,17 @@ struct PostManagerView: View {
                             .font(.title)
                         Spacer()
                     }
-                    TextField("住所",text:$inputAddress,onCommit:{
-                        //入力が完了したので検索キーワードに設定する
-                        postAddress = inputAddress
-                        //検索キーワードをデバックエリアに出力する
-                        print("入力したキーワード："+postAddress)
-                    })
+                    
+                    //修正間に合わなければ
+//                    Text(viewModel.post.location)
+                    
+//                    修正間に合えば
+//                    TextField("住所",text:$inputAddress,onCommit:{
+//                        //入力が完了したので検索キーワードに設定する
+//                        postAddress = inputAddress
+//                        //検索キーワードをデバックエリアに出力する
+//                        print("入力したキーワード："+postAddress)
+//                    })
                     .frame(height: 30)
                     
                     Rectangle()
@@ -124,8 +136,10 @@ struct PostManagerView: View {
                             .aspectRatio(contentMode: .fit)
                             .foregroundColor(Color("appRed"))
                             .frame(width:35)
-                        Text(good)
-                            .font(.title2)
+                        
+//                        Text(viewModel.post.likes)
+//                            .font(.title2)
+                        
                         Spacer()
                     }
                 }
@@ -154,10 +168,11 @@ struct PostManagerView: View {
                 .alert(isPresented: $showingAlert){
                     Alert(title: Text("削除しますか？"),
                     primaryButton: .cancel(Text("キャンセル")),
-                    secondaryButton: .destructive(Text("削除"))/*,*/
-                    //↓ここに削除する処理を書く
-//                    action:
-                    )
+                    secondaryButton: .destructive(Text("削除"),
+//                    ↓ここに削除する処理を書く
+                    action: {
+//                        viewModel.deletePost()
+                    }))
                 }
             }//VStack
             .frame(width: windowWidth, height: windowHeight)

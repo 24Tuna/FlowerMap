@@ -202,20 +202,21 @@ struct PostView: View {
                 .background(Color(red:58/255,green:171/255, blue:210/255))
                 .alert(isPresented: $showingAlert){
                     Alert(title: Text("投稿しますか？"),
-                          primaryButton: .cancel(Text("キャンセル")),
-                          secondaryButton: .default(Text("投稿"))
-//                          ,
-                          //↓ここに投稿する処理を書く
-//                          action:
-                          
-//                    if let image = selectedImage {
-//                        viewModel.uploadPost(tags: tags, location: location, image: image) { _ in
-//                            postImage = nil
-//                        }
-//                    }
-                          
-                          )
+                          primaryButton:
+                            .cancel(Text("キャンセル")),
+                          secondaryButton:
+                            .default(Text("投稿"),
+                                     action: {
+                                        if let image = selectedImage {
+//                                            viewModel.uploadPost(tags: tags, location: location, image: image) { _ in
+//                                                postImage = nil
+//                                            }
+                                        }
+                                     }))
+
                 }
+                
+                
             }//VStack
             .frame(width: windowWidth, height: windowHeight)
             .padding()

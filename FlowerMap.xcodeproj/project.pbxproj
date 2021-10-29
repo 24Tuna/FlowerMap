@@ -36,6 +36,7 @@
 		7F80F1E8272B7BB600893C07 /* UploadPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F80F1E7272B7BB600893C07 /* UploadPostViewModel.swift */; };
 		7F80F1ED272B7FDD00893C07 /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F80F1EC272B7FDD00893C07 /* TagListView.swift */; };
 		7F80F1F1272B803300893C07 /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F80F1F0272B803300893C07 /* TagCell.swift */; };
+		7F80F1F8272BAB8000893C07 /* DeletePostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F80F1F7272BAB8000893C07 /* DeletePostViewModel.swift */; };
 		7F94109E272B990000CA67A3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F94109D272B990000CA67A3 /* LoginView.swift */; };
 		7F9410A0272B991D00CA67A3 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F94109F272B991D00CA67A3 /* CreateAccountView.swift */; };
 		7F9D3DF42716E6B800D24399 /* RnkingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D3DF32716E6B800D24399 /* RnkingView.swift */; };
@@ -85,6 +86,7 @@
 		7F80F1E7272B7BB600893C07 /* UploadPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostViewModel.swift; sourceTree = "<group>"; };
 		7F80F1EC272B7FDD00893C07 /* TagListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
 		7F80F1F0272B803300893C07 /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
+		7F80F1F7272BAB8000893C07 /* DeletePostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePostViewModel.swift; sourceTree = "<group>"; };
 		7F94109D272B990000CA67A3 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7F94109F272B991D00CA67A3 /* CreateAccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 		7F9D3DF32716E6B800D24399 /* RnkingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RnkingView.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 		7F80F1CB272B39F800893C07 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				7F80F1F6272BAB6600893C07 /* DeletePost */,
 				7F80F1E6272B7B8400893C07 /* UploadPost */,
 				7F80F1CC272B3A2100893C07 /* Tag */,
 			);
@@ -259,6 +262,14 @@
 				7F80F1F0272B803300893C07 /* TagCell.swift */,
 			);
 			path = Tag;
+			sourceTree = "<group>";
+		};
+		7F80F1F6272BAB6600893C07 /* DeletePost */ = {
+			isa = PBXGroup;
+			children = (
+				7F80F1F7272BAB8000893C07 /* DeletePostViewModel.swift */,
+			);
+			path = DeletePost;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +351,7 @@
 				7F9D3DFC27182FFB00D24399 /* Ranking1st.swift in Sources */,
 				7FD696B3272112A200C39E2E /* Ranking.swift in Sources */,
 				7FFF0BB0271D3ED1002C5A05 /* PhotoView.swift in Sources */,
+				7F80F1F8272BAB8000893C07 /* DeletePostViewModel.swift in Sources */,
 				7F80F192272A511400893C07 /* User.swift in Sources */,
 				7F1678F62722BC76006B634F /* ImagePickerView.swift in Sources */,
 				7F3B85FF26A5772F00B77A5D /* FlowerMapApp.swift in Sources */,
