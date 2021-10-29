@@ -7,23 +7,6 @@
 import UIKit
 import SwiftUI
 
-//class PostViewModel: ObservableObject {
-//    var sum: CGFloat = 0
-//
-//    func makeTag(tagName: String, width: CGFloat) -> (isShow: Bool, view: PostTagView){
-//        let tag = PostTagView(tagText: tagName)
-//        sum += tag.fontWidth + 80
-//
-//        if sum > width - 25 {
-//            return (false, tag)
-//        } else {
-//            return (true, tag)
-//        }
-//
-//    }
-//
-//}
-
 struct PostView: View {
     @Binding var isPost : Bool
     //入力中の文字列を保持する状態変数
@@ -37,6 +20,8 @@ struct PostView: View {
     @State var isShowSheet = false
     @State var isPhotoLibrary = false
     @State var isShowAction = false
+    
+    @State private var showingAlert = false
     
     let tags:[String] = ["タグ名","タグ名", "タグタグタグ","test"]
     
@@ -53,17 +38,6 @@ struct PostView: View {
     @State var postImage: Image?
     
     @State var captureImage: UIImage?
-//    //投稿する写真(showImage)
-//    @State var postImage:UIImage?
-    
-//    private var list: [ListViewCell] = []
-//    init(isPost:Binding<Bool>) {
-//        for number in 0..<tags.count {
-//            tagName = tags[number]
-//            list.append(ListViewCell(number: number, tagName: tagName))
-//        }
-//        self._isPost = isPost
-//    }
     
     var body: some View {
         ZStack{
@@ -93,10 +67,6 @@ struct PostView: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(height:250)
                     }
-//                    Image("picture")
-//                        .resizable()
-//                        .aspectRatio(contentMode: .fit)
-//                        .frame(width: 300)
                 }.sheet(isPresented: $isShowSheet){
                     if isPhotoLibrary{
                         PHPickerView(
@@ -140,15 +110,6 @@ struct PostView: View {
                         }
                         
                         PostScrollView()
-                    
-//                        ScrollView(.horizontal){
-//                            HStack{
-//                                ForEach(tagsFilter()) { item in
-//                                    item
-//                                }
-//                            }
-//                        }
-                            
                         
                         
                         Spacer()
@@ -202,9 +163,10 @@ struct PostView: View {
                     }
                     
                     Spacer()
-                    
+                
+                    //投稿ボタン
                     Button(action:{
-                        
+                        showingAlert = true
                     }){
                         HStack{
                             Image(systemName:"plus.circle")
@@ -220,6 +182,14 @@ struct PostView: View {
                         }
                     }
                     .background(Color(red:58/255,green:171/255, blue:210/255))
+                    .alert(isPresented: $showingAlert){
+                        Alert(title: Text("投稿しますか？"),
+                        primaryButton: .cancel(Text("キャンセル")),
+                        secondaryButton: .default(Text("投稿"))/*,*/
+                        //↓ここに投稿する処理を書く
+//                        action:
+                        )
+                    }
                 }//VStack
                 .frame(width: windowWidth, height: windowHeight)
                 .padding()
@@ -230,37 +200,6 @@ struct PostView: View {
                 .edgesIgnoringSafeArea(.all)
             }//ZStack
     }//body
-    
-//    func tagsFilter() -> [ListViewCell] {
-//            var result: [ListViewCell] = []
-//
-//            list.forEach { item in
-//
-//                if tag.isShow {
-//                    tag.view
-//                }else{
-//                    Button(action: {
-//                        self.isOpenList.toggle()
-//                    }){
-//                        Image(systemName: "list.bullet")
-//                            .resizable()
-//                            .aspectRatio(contentMode: .fit)
-//                            .frame(width: 25)
-//                            .padding()
-//                            .foregroundColor(Color("tagColor"))
-//                    }
-//                    return
-//                }
-//
-//                if Double(windowWidth) < sumWidth {
-//                    return
-//                }
-//
-//                result.append(item)
-//            }
-//
-//            return result
-//        }
 }
 
 
