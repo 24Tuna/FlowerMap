@@ -36,6 +36,8 @@
 		7F80F1E8272B7BB600893C07 /* UploadPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F80F1E7272B7BB600893C07 /* UploadPostViewModel.swift */; };
 		7F80F1ED272B7FDD00893C07 /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F80F1EC272B7FDD00893C07 /* TagListView.swift */; };
 		7F80F1F1272B803300893C07 /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F80F1F0272B803300893C07 /* TagCell.swift */; };
+		7F94109E272B990000CA67A3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F94109D272B990000CA67A3 /* LoginView.swift */; };
+		7F9410A0272B991D00CA67A3 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F94109F272B991D00CA67A3 /* CreateAccountView.swift */; };
 		7F9D3DF42716E6B800D24399 /* RnkingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D3DF32716E6B800D24399 /* RnkingView.swift */; };
 		7F9D3DFA27182F6800D24399 /* TagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D3DF927182F6800D24399 /* TagButton.swift */; };
 		7F9D3DFC27182FFB00D24399 /* Ranking1st.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D3DFB27182FFB00D24399 /* Ranking1st.swift */; };
@@ -83,6 +85,8 @@
 		7F80F1E7272B7BB600893C07 /* UploadPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostViewModel.swift; sourceTree = "<group>"; };
 		7F80F1EC272B7FDD00893C07 /* TagListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
 		7F80F1F0272B803300893C07 /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
+		7F94109D272B990000CA67A3 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		7F94109F272B991D00CA67A3 /* CreateAccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 		7F9D3DF32716E6B800D24399 /* RnkingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RnkingView.swift; sourceTree = "<group>"; };
 		7F9D3DF927182F6800D24399 /* TagButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagButton.swift; sourceTree = "<group>"; };
 		7F9D3DFB27182FFB00D24399 /* Ranking1st.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking1st.swift; sourceTree = "<group>"; };
@@ -163,6 +167,8 @@
 				7FF50F2827226B5600F846EB /* MyPageView.swift */,
 				7F1678F52722BC76006B634F /* ImagePickerView.swift */,
 				7FD0051C2726A190003CFDC1 /* PHPickerView.swift */,
+				7F94109D272B990000CA67A3 /* LoginView.swift */,
+				7F94109F272B991D00CA67A3 /* CreateAccountView.swift */,
 				7F3B860226A5773000B77A5D /* Assets.xcassets */,
 				7F3B860726A5773000B77A5D /* Info.plist */,
 				7F3B860426A5773000B77A5D /* Preview Content */,
@@ -369,6 +375,8 @@
 				7F9D3DFE2718300700D24399 /* Ranking2nd.swift in Sources */,
 				7F9D3E002718301300D24399 /* Ranking3rd.swift in Sources */,
 				7F7C9E21272A4E4B00EA6579 /* Constans.swift in Sources */,
+				7F9410A0272B991D00CA67A3 /* CreateAccountView.swift in Sources */,
+				7F94109E272B990000CA67A3 /* LoginView.swift in Sources */,
 				7F9D3DF42716E6B800D24399 /* RnkingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
