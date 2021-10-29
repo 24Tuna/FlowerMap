@@ -39,6 +39,7 @@
 		7F9D3DFC27182FFB00D24399 /* Ranking1st.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D3DFB27182FFB00D24399 /* Ranking1st.swift */; };
 		7F9D3DFE2718300700D24399 /* Ranking2nd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D3DFD2718300700D24399 /* Ranking2nd.swift */; };
 		7F9D3E002718301300D24399 /* Ranking3rd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D3DFF2718301300D24399 /* Ranking3rd.swift */; };
+		7FCF0420272B803300700C9C /* ContentScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCF041F272B803300700C9C /* ContentScrollView.swift */; };
 		7FD00518272669FA003CFDC1 /* AddTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD00517272669FA003CFDC1 /* AddTagView.swift */; };
 		7FD0051D2726A190003CFDC1 /* PHPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD0051C2726A190003CFDC1 /* PHPickerView.swift */; };
 		7FD696B3272112A200C39E2E /* Ranking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD696B2272112A200C39E2E /* Ranking.swift */; };
@@ -82,6 +83,7 @@
 		7F9D3DFB27182FFB00D24399 /* Ranking1st.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking1st.swift; sourceTree = "<group>"; };
 		7F9D3DFD2718300700D24399 /* Ranking2nd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking2nd.swift; sourceTree = "<group>"; };
 		7F9D3DFF2718301300D24399 /* Ranking3rd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking3rd.swift; sourceTree = "<group>"; };
+		7FCF041F272B803300700C9C /* ContentScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentScrollView.swift; sourceTree = "<group>"; };
 		7FD00517272669FA003CFDC1 /* AddTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTagView.swift; sourceTree = "<group>"; };
 		7FD0051C2726A190003CFDC1 /* PHPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPickerView.swift; sourceTree = "<group>"; };
 		7FD696B2272112A200C39E2E /* Ranking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				7F6C07592717C291007397C9 /* PostManagerView.swift */,
 				7F561A272720FF19001972B0 /* TagManegerListView.swift */,
 				7F561A3027211BEB001972B0 /* ContentView.swift */,
+				7FCF041F272B803300700C9C /* ContentScrollView.swift */,
 				7F561A2A27210CD1001972B0 /* CloseButtonView.swift */,
 				7F115A0A2713FBD00090EC86 /* MainMenuButton.swift */,
 				7F7879F7271006B600CD1255 /* SubmissionView.swift */,
@@ -322,6 +325,7 @@
 				7F561A282720FF19001972B0 /* TagManegerListView.swift in Sources */,
 				7F4A35412713D72600AFF0D1 /* CaptionView.swift in Sources */,
 				7F561A2B27210CD1001972B0 /* CloseButtonView.swift in Sources */,
+				7FCF0420272B803300700C9C /* ContentScrollView.swift in Sources */,
 				7F9D3DFA27182F6800D24399 /* TagButton.swift in Sources */,
 				7F511A33270AC2AF0094299C /* SideMenuButton.swift in Sources */,
 				7F7C9E1F272A4CF000EA6579 /* AuthViewModel.swift in Sources */,

@@ -44,7 +44,7 @@ struct PostManagerView: View {
                 Image("picture")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 300)
+                    .frame(height:250)
                 Spacer()
                 
                 //タグ

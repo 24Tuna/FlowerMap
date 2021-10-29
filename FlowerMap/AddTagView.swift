@@ -34,6 +34,7 @@ struct AddTagView: View {
                     .padding(.leading, 16)
                     .padding(.trailing, 16)
                 
+                //タグを追加するボタン
                 Button(action: {
                     
                 }){
@@ -55,7 +56,7 @@ struct AddTagView: View {
             }//VStack
             .padding()
             .background(Color("buttonFontColor"))
-        }//ZStackz.background(Color.gray.opacity(0.5))
+        }//ZStack
         .opacity(self.isAddTag ? 1.0 : 0.0)
         .animation(.easeIn(duration: 0.25))
     }

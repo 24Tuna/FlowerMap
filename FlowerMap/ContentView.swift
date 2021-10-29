@@ -41,14 +41,8 @@ struct ContentView: View {
                             .font(.title)
                         Spacer()
                     }
-                
-//                    ScrollView(.horizontal){
-//                        HStack{
-//                            ForEach(tagsFilter()) { item in
-//                                item
-//                            }
-//                        }
-//                    }
+                    
+                    ContentScrollView()
                     
                 }
                 

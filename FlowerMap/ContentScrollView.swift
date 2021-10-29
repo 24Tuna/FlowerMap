@@ -1,41 +1,40 @@
 //
-//  ScrollView.swift
+//  ContentScrollView.swift
 //  FlowerMap
 //
-//  Created by cmStudent on 2021/10/28.
+//  Created by cmStudent on 2021/10/29.
 //
 
 import SwiftUI
 
-struct PostTagListViewCell: View, Identifiable {
+struct ContentTagListViewCell: View, Identifiable {
     let id = UUID()
-
-//    let number : Int
 
     let tagName: String
 
     var body: some View {
         
-    PostTagView(tagText: tagName)
+        TagButton(tagtext: tagName)
         
     }
 
 }
 
-struct PostScrollView: View {
+struct ContentScrollView: View {
     
     let tags:[String] = ["タグ名","タグ名", "タグタグタグ","test"]
 
     var tagName: String = ""
     var number:Int = 0
 
-    private var list: [PostTagListViewCell] = []
+    private var list: [ContentTagListViewCell] = []
     init() {
         for number in 0..<tags.count {
             tagName = tags[number]
-            list.append(PostTagListViewCell( tagName: tagName))
+            list.append(ContentTagListViewCell( tagName: tagName))
         }
     }
+    
     var body: some View {
         
         ScrollView(.horizontal){
@@ -45,11 +44,10 @@ struct PostScrollView: View {
                 }
             }//HStack
         }
-
     }
-
-    func tagsFilter() -> [PostTagListViewCell] {
-            var result: [PostTagListViewCell] = []
+    
+    func tagsFilter() -> [ContentTagListViewCell] {
+            var result: [ContentTagListViewCell] = []
 
             list.forEach { item in
                 result.append(item)
@@ -57,10 +55,11 @@ struct PostScrollView: View {
 
             return result
     }
+    
 }
 
-struct PostScrollView_Previews: PreviewProvider {
+struct ContentScrollView_Previews: PreviewProvider {
     static var previews: some View {
-        PostScrollView()
+        ContentScrollView()
     }
 }
