@@ -5,6 +5,7 @@
 //  Created by cmStudent on 2021/10/28.
 //
 //imort Firebase
+//typealias FirestoreCompletion = ((Error?) -> Void)?
 //
 //let COLLECTION_USERS = Firestore.firestore().collection("users")
 //let COLLECTION_FOLLOWERS = Firestore.firestore().collection("followers")

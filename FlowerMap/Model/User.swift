@@ -13,8 +13,6 @@
 //    let username: String
 //    let email: String
 //    let profileImageUrl: String
-//    let fullname: String
-//    let uid: String
 //    
 //    var stats: UserStats?
 //    var isFollowed: Bool? = false
