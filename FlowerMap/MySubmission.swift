@@ -35,9 +35,10 @@ struct MySubmission: Listcell {
             
             VStack {
                 HStack {
-                    ForEach(0..<tags.count) {
-                        num in TagButton(tagtext: tags[num])
-                    }
+                    ContentScrollView()
+//                    ForEach(0..<tags.count) {
+//                        num in TagButton(tagtext: tags[num])
+//                    }
                 }
                 
                 .frame(width: locationsWidth, height: locationsHeight)

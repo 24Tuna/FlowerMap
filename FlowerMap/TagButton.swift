@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TagButton: View {
-    let tagSize = UIScreen.main.bounds.size.width / 20
+//    let tagSize = UIScreen.main.bounds.size.width / 20
     let tagtext: String
     var body: some View {
         Button(action: {
@@ -16,9 +16,10 @@ struct TagButton: View {
         }) {
             VStack {
                 Text("#\(tagtext)")
+                    .padding(8)
                     .background(Color("tagColor"))
-                    .foregroundColor(Color.white)
-                    .font(.system(size: tagSize))
+                    .foregroundColor(Color("buttonFontColor"))
+                    .font(.custom("HiraMaruProN-W4", size: 10))
             }
         }
     }

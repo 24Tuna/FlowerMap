@@ -15,7 +15,8 @@ struct MyPageView: View {
     let submission: [MySubmission]
     init(isShowAction: Binding<Bool>) {
         var work: [MySubmission] = []
-        for num in 0...5 {
+        //submissionの表示回数
+        for num in 0..<5 {
             work.append(MySubmission(number: num))
         }
         submission = work
@@ -93,11 +94,20 @@ struct MyPageView: View {
                     
                 } //HStack
                 ScrollView(.vertical) {
-                    ForEach (submission) { num in
-                        num
-                            .padding()
-                            .frame(height: submissionHeight)
+                    if isMyfavorite{
+                        ForEach (submission) { num in
+                            num
+                                .padding()
+                                .frame(height: submissionHeight)
+                        }
+                    }else{
+                        ForEach (submission) { num in
+                            num
+                                .padding()
+                                .frame(height: submissionHeight)
+                        }
                     }
+                    
                 } //ScrollView
             } //VStack
         } //ZStack
