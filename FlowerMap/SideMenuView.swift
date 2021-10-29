@@ -25,6 +25,7 @@ struct SideMenuView: View {
     let winterFlos:[String] = ["ツバキ"]
     
     let spacer_Width = UIScreen.main.bounds.size.width / 2.5
+    let scrollHeight = UIScreen.main.bounds.size.height / 1.8
     let animation_Width = 270
     
     var body: some View {
@@ -55,7 +56,7 @@ struct SideMenuView: View {
                         self.isOpenSearch.toggle()
                     }
                     
-                    VStack{
+                    ScrollView(.vertical){
                         TextField("住所検索",text:$inputText,onCommit:{
                             //入力が完了したので検索キーワードに設定する
                             dispSearchKey = inputText
@@ -93,9 +94,10 @@ struct SideMenuView: View {
                                 
                             }
                         }
-                    }//VStack
+                    }//ScrollView
                     .opacity(self.isOpenSearch ? 1.0 : 0.0)
                     .animation(.easeIn(duration: 0.25))
+                    .frame(height:scrollHeight)
                     
                 }
                 .background(Color("backColor"))

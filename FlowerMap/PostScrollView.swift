@@ -40,22 +40,12 @@ struct PostScrollView: View {
         
         ScrollView(.horizontal){
             HStack{
-                ForEach(tagsFilter()) { item in
+                ForEach(list) { item in
                     item
                 }
             }//HStack
         }
 
-    }
-
-    func tagsFilter() -> [PostTagListViewCell] {
-            var result: [PostTagListViewCell] = []
-
-            list.forEach { item in
-                result.append(item)
-            }
-
-            return result
     }
 }
 

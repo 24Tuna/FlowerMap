@@ -28,6 +28,9 @@ struct SearchMenuButton: View {
                     .frame(width:30,height: 30)
             }
         }
+        .onTapGesture {
+            //
+        }
     }
 }
 

@@ -34,6 +34,8 @@
 		7F80F1D2272B3A9B00893C07 /* TagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F80F1D1272B3A9B00893C07 /* TagViewModel.swift */; };
 		7F80F1D6272B3B7100893C07 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F80F1D5272B3B7100893C07 /* ImageUploader.swift */; };
 		7F80F1E8272B7BB600893C07 /* UploadPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F80F1E7272B7BB600893C07 /* UploadPostViewModel.swift */; };
+		7F80F1ED272B7FDD00893C07 /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F80F1EC272B7FDD00893C07 /* TagListView.swift */; };
+		7F80F1F1272B803300893C07 /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F80F1F0272B803300893C07 /* TagCell.swift */; };
 		7F9D3DF42716E6B800D24399 /* RnkingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D3DF32716E6B800D24399 /* RnkingView.swift */; };
 		7F9D3DFA27182F6800D24399 /* TagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D3DF927182F6800D24399 /* TagButton.swift */; };
 		7F9D3DFC27182FFB00D24399 /* Ranking1st.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D3DFB27182FFB00D24399 /* Ranking1st.swift */; };
@@ -78,6 +80,8 @@
 		7F80F1D1272B3A9B00893C07 /* TagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewModel.swift; sourceTree = "<group>"; };
 		7F80F1D5272B3B7100893C07 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		7F80F1E7272B7BB600893C07 /* UploadPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostViewModel.swift; sourceTree = "<group>"; };
+		7F80F1EC272B7FDD00893C07 /* TagListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
+		7F80F1F0272B803300893C07 /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
 		7F9D3DF32716E6B800D24399 /* RnkingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RnkingView.swift; sourceTree = "<group>"; };
 		7F9D3DF927182F6800D24399 /* TagButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagButton.swift; sourceTree = "<group>"; };
 		7F9D3DFB27182FFB00D24399 /* Ranking1st.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking1st.swift; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 		7F3B85FD26A5772F00B77A5D /* FlowerMap */ = {
 			isa = PBXGroup;
 			children = (
+				7F80F1EA272B7FB400893C07 /* View */,
 				7F80F189272A50F700893C07 /* Model */,
 				7F80F1CB272B39F800893C07 /* ViewModel */,
 				7F80F1D4272B3B2900893C07 /* API */,
@@ -230,6 +235,23 @@
 			path = UploadPost;
 			sourceTree = "<group>";
 		};
+		7F80F1EA272B7FB400893C07 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7F80F1EB272B7FBD00893C07 /* Tag */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7F80F1EB272B7FBD00893C07 /* Tag */ = {
+			isa = PBXGroup;
+			children = (
+				7F80F1EC272B7FDD00893C07 /* TagListView.swift */,
+				7F80F1F0272B803300893C07 /* TagCell.swift */,
+			);
+			path = Tag;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -325,8 +347,13 @@
 				7F561A282720FF19001972B0 /* TagManegerListView.swift in Sources */,
 				7F4A35412713D72600AFF0D1 /* CaptionView.swift in Sources */,
 				7F561A2B27210CD1001972B0 /* CloseButtonView.swift in Sources */,
+
 				7FCF0420272B803300700C9C /* ContentScrollView.swift in Sources */,
+
+				7F80F1ED272B7FDD00893C07 /* TagListView.swift in Sources */,
+
 				7F9D3DFA27182F6800D24399 /* TagButton.swift in Sources */,
+				7F80F1F1272B803300893C07 /* TagCell.swift in Sources */,
 				7F511A33270AC2AF0094299C /* SideMenuButton.swift in Sources */,
 				7F7C9E1F272A4CF000EA6579 /* AuthViewModel.swift in Sources */,
 				7F80F1D2272B3A9B00893C07 /* TagViewModel.swift in Sources */,
