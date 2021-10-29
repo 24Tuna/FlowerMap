@@ -24,22 +24,6 @@ import SwiftUI
 //
 //}
 
-//struct ListViewCell: View, Identifiable {
-//    let id = UUID()
-//
-//    let number : Int
-//
-//    let tagName: String
-//
-//    var body: some View {
-//
-//        VStack {
-//            PostTagView(tagText: tagName)
-//        }
-//    }
-//
-//}
-
 struct PostView: View {
     @Binding var isPost : Bool
     //入力中の文字列を保持する状態変数
@@ -62,12 +46,15 @@ struct PostView: View {
     
     var tagName: String = ""
     var number:Int = 0
-//    @State var postImage: Image?
     
+    //選択された写真
+    @State private var selectedImage:UIImage? = nil
+    //投稿する写真
+    @State var postImage: Image?
     
     @State var captureImage: UIImage?
-    //投稿する写真(showImage)
-    @State var postImage:UIImage?
+//    //投稿する写真(showImage)
+//    @State var postImage:UIImage?
     
 //    private var list: [ListViewCell] = []
 //    init(isPost:Binding<Bool>) {
@@ -92,11 +79,24 @@ struct PostView: View {
                 Button(action: {
                     isShowAction = true
                 }){
-                    
-                    Image("picture")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 300)
+                    if postImage == nil {
+                                // 画像選択前
+                        Image("picture")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(height:250)
+                        
+                    } else if let image = postImage {
+                        // 画像選択後
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(height:250)
+                    }
+//                    Image("picture")
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fit)
+//                        .frame(width: 300)
                 }.sheet(isPresented: $isShowSheet){
                     if isPhotoLibrary{
                         PHPickerView(

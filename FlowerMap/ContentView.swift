@@ -7,22 +7,6 @@
 
 import SwiftUI
 
-//struct ListViewCell: View, Identifiable {
-//    let id = UUID()
-//    
-//    let number : Int
-//    
-//    let tagName: String
-//    
-//    var body: some View {
-//        
-//        VStack {
-//            PostTagView(tagText: tagName)
-//        }
-//    }
-//    
-//}
-
 struct ContentView: View {
     @Binding var isOpenContent: Bool
     

@@ -71,28 +71,8 @@ struct PostManagerView: View {
                             
                     }
                     
-                    HStack{
-                        ForEach(0..<tags.count){num in
-                                
-                            let tag: (isShow: Bool, view: PostTagView) = postManagerViewModel.makeTag(tagName: tags[num], width: windowWidth)
-                                
-                            if tag.isShow {
-                                tag.view
-                            }else{
-                                Button(action: {
-                                    self.isOpenList.toggle()
-                                }){
-                                    Image(systemName: "list.bullet")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(width: 25)
-                                        .padding()
-                                        .foregroundColor(Color("tagColor"))
-                                }
-                            }
-                        }//ForEach
-                        
-                    }//HStack
+                    
+                    PostScrollView()
                     
                     Spacer()
                         .frame(height:20)

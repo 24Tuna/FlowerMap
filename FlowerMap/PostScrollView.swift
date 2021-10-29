@@ -56,7 +56,7 @@ struct PostScrollView: View {
             }
 
             return result
-        }
+    }
 }
 
 struct PostScrollView_Previews: PreviewProvider {
