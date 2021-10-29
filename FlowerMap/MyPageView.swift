@@ -12,19 +12,20 @@ struct MyPageView: View {
     @State var isMyfavorite = false
     @Binding var isShowAction : Bool
     
-    let submission: [MySubmission]
-    init(isShowAction: Binding<Bool>) {
-        var work: [MySubmission] = []
-        //submissionの表示回数
-        for num in 0..<5 {
-            work.append(MySubmission(number: num))
-        }
-        submission = work
+    let config: PostGridConfiguration
+    @ObservedObject var mySubmissionViewModel: PostGridViewModel
+    @ObservedObject var likeViewModel = LikeCellViewModel()
+    
+    init(config: PostGridConfiguration, isShowAction: Binding<Bool>) {
+        self.config = config
+        
+        self.mySubmissionViewModel = PostGridViewModel(config: config)
+
         
         self._isShowAction = isShowAction
         
     }
-    
+
     let photoWidth = UIScreen.main.bounds.size.width / 4
     let photoHeight = UIScreen.main.bounds.size.height / 10
     let photoFrameWidth = UIScreen.main.bounds.size.width / 2.5
@@ -93,29 +94,23 @@ struct MyPageView: View {
                     .padding()
                     
                 } //HStack
-                ScrollView(.vertical) {
-                    if isMyfavorite{
-                        ForEach (submission) { num in
-                            num
-                                .padding()
-                                .frame(height: submissionHeight)
-                        }
-                    }else{
-                        ForEach (submission) { num in
-                            num
-                                .padding()
-                                .frame(height: submissionHeight)
-                        }
+                
+                
+                ScrollView([.vertical]) {
+                    ForEach (isMyPhotos ? mySubmissionViewModel.posts : likeViewModel.post) { post in
+                        MySubmission(post: post)
+                            .padding()
+                            .frame(height: submissionHeight)
                     }
-                    
                 } //ScrollView
+                
             } //VStack
         } //ZStack
     }
 }
 
-struct MyPageView_Previews: PreviewProvider {
-    static var previews: some View {
-        MyPageView(isShowAction: .constant(true))
-    }
-}
+//struct MyPageView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MyPageView(isShowAction: .constant(true))
+//    }
+//}

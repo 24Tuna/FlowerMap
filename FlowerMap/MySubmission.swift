@@ -9,7 +9,7 @@ import SwiftUI
 typealias Listcell = View & Identifiable
 
 struct MySubmission: Listcell {
-    @State var number: Int
+//    @State var number: Int
     let id = UUID()
 
     let mypictureWidth = UIScreen.main.bounds.size.width / 2.5
@@ -28,9 +28,16 @@ struct MySubmission: Listcell {
     
     let Location: String = "位置情報"
     let tags:[String] = ["新宿", "渋谷"]
+    
+    let post: Post
+    
+    init(post: Post) {
+        self.post = post
+    }
+    
     var body: some View {
         HStack {
-            PhotoView()
+            PhotoView(postURL: post.imageUrl)
                 .frame(width: mypictureWidth, height: mypictureHeight)
             
             VStack {
@@ -66,11 +73,5 @@ struct MySubmission: Listcell {
         .frame(width: submissionWidth, height: submissionHeight)
         .background(Color("buttonFontColor"))
         .cornerRadius(5)
-    }
-}
-
-struct MySubmission_Previews: PreviewProvider {
-    static var previews: some View {
-        MySubmission(number: 0)
     }
 }

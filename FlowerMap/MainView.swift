@@ -9,6 +9,9 @@ import SwiftUI
 import MapKit
 
 struct MainView: View {
+    
+    let user: User
+    
     @State var isOpenSideMenu: Bool = false
     @State var isOpenSearch : Bool = false
     @State var isOpenContent : Bool = false
@@ -85,15 +88,9 @@ struct MainView: View {
                 }
             })//toolbar
                 
-            SideMenuView(isOpenSideMenu: $isOpenSideMenu, isOpenSearch: $isOpenSearch)
+                SideMenuView(user: user, isOpenSideMenu: $isOpenSideMenu, isOpenSearch: $isOpenSearch)
                 .edgesIgnoringSafeArea(.all)
             }//ZStack
         }
-    }
-}
-
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
     }
 }

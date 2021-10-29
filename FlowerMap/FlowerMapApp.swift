@@ -17,7 +17,8 @@ struct FlowerMapApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MainView()
+            BranchView().environmentObject(AuthViewModel.shared)
+//            MainView()
             //PostManagerView()
         }
     }

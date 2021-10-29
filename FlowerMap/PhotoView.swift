@@ -6,17 +6,20 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct PhotoView: View {
+
+    let postURL: String
+    
+    init(postURL: String) {
+        self.postURL = postURL
+    }
+    
     var body: some View {
-        Image("picture")
+ 
+        KFImage(URL(string: postURL))
             .resizable()
             .aspectRatio(contentMode: .fit)
-    }
-}
-
-struct PhotoView_Previews: PreviewProvider {
-    static var previews: some View {
-        PhotoView()
     }
 }

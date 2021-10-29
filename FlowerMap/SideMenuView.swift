@@ -13,6 +13,7 @@ struct SideMenuView: View {
     let scrollHeight = UIScreen.main.bounds.size.height / 1.8
     let animation_Width = 270
     
+    let user: User
     
     @Binding var isOpenSideMenu : Bool
     @Binding var isOpenSearch : Bool
@@ -49,7 +50,7 @@ struct SideMenuView: View {
                         self.isOpenSideMenu = false
                     }
                     .fullScreenCover(isPresented:$isShowAction){
-                        MyPageView(isShowAction: $isShowAction)
+                        MyPageView(config: .profile(user.uid), isShowAction: $isShowAction)
                     }
                     
                     SideMenuButton(buttonName: "検索"){
@@ -111,14 +112,5 @@ struct SideMenuView: View {
                     .frame(width:spacer_Width)
             }
         }
-    }
-}
-
-struct SideMenuView_Previews: PreviewProvider {
-    static var previews: some View {
-        SideMenuView(
-            isOpenSideMenu: Binding.constant(true),
-            isOpenSearch: Binding.constant(true)
-        )
     }
 }
