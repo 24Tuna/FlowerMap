@@ -88,11 +88,9 @@ struct AddTagView: View {
                 .frame(height:55)
 
             }//VStack
+        }
             .padding()
             .background(Color("buttonFontColor"))
-
-            
-        }//ZStackz.background(Color.gray.opacity(0.5))
 
         }//ZStack
 

@@ -30,6 +30,11 @@ struct PostAlertView: View {
                         showingAlert = false
                     }){
                         Text("キャンセル")
+                            .padding()
+                            .frame(width: 200)
+                            .foregroundColor(.black)
+                            .background(Color(.white))
+                            .cornerRadius(3.0)
                     }
                     
                     //投稿ボタン
@@ -38,7 +43,10 @@ struct PostAlertView: View {
                         showingAlert = false
                     }){
                         Text("投稿")
+                            .padding()
+                            .frame(width: 200)
                             .foregroundColor(Color("appBlue"))
+                            .background(Color(.white))
                     }
                     
                 }//HStack

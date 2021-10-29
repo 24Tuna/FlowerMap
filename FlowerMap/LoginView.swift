@@ -42,6 +42,8 @@ struct LoginView: View {
                 }
                 
                 VStack(spacing: 20) {
+                    
+                    //ログインボタン
                     Button(action: {
                         
                     }) {
