@@ -7,22 +7,7 @@
 
 import SwiftUI
 
-class PostManagerViewModel: ObservableObject {
-    var sum: CGFloat = 0
-    
-    func makeTag(tagName: String, width: CGFloat) -> (isShow: Bool, view: PostTagView){
-        let tag = PostTagView(tagText: tagName)
-        sum += tag.fontWidth + 80
-        
-        if sum > width - 25 {
-            return (false, tag)
-        } else {
-            return (true, tag)
-        }
-        
-    }
-    
-}
+
 
 struct PostManagerView: View {
     //入力中の文字列を保持する状態変数
@@ -33,13 +18,13 @@ struct PostManagerView: View {
     @State var good = "100"
     @State var isOpenList : Bool = false
     @State var isAddTag : Bool = false
+    
+    @State private var showingAlert = false
+    
     let tags:[String] = ["タグ名","タグ名", "タグタグタグ"]
     
     let windowWidth = UIScreen.main.bounds.size.width / 1.2
     let windowHeight = UIScreen.main.bounds.size.height / 1.2
-    
-
-    let postManagerViewModel = PostManagerViewModel()
     
     var body: some View {
         ZStack{
@@ -141,8 +126,10 @@ struct PostManagerView: View {
                 
                 Spacer()
                 
+                //削除ボタン
                 Button(action:{
-                    
+                    //アラートのON/OFF
+                    showingAlert = true
                 }){
                     HStack{
                         Image(systemName:"trash")
@@ -158,6 +145,14 @@ struct PostManagerView: View {
                     }
                 }
                 .background(Color("appRed"))
+                .alert(isPresented: $showingAlert){
+                    Alert(title: Text("削除しますか？"),
+                    primaryButton: .cancel(Text("キャンセル")),
+                    secondaryButton: .destructive(Text("削除"))/*,*/
+                    //↓ここに削除する処理を書く
+//                    action:
+                    )
+                }
             }//VStack
             .frame(width: windowWidth, height: windowHeight)
             .padding()
