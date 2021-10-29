@@ -10,21 +10,27 @@ import SwiftUI
 
 
 struct PostManagerView: View {
+    // レイアウト
+    let windowWidth = UIScreen.main.bounds.size.width / 1.2
+    let windowHeight = UIScreen.main.bounds.size.height / 1.2
+
     //入力中の文字列を保持する状態変数
     @State var inputAddress:String = ""
     //検索キーワードを保持する状態変数
     @State var postAddress = ""
     
-    @State var good = "100"
-    @State var isOpenList : Bool = false
-    @State var isAddTag : Bool = false
+    @State private var showingAlert = false // 削除するか最終確認
+    @State var good = "100"     // いいね数
     
-    @State private var showingAlert = false
+//    時間が足りれば修正機能追加予定
+//    @State var isOpenList : Bool = false
+//    @State var isAddTag : Bool = false
     
-    let tags:[String] = ["タグ名","タグ名", "タグタグタグ"]
-    
-    let windowWidth = UIScreen.main.bounds.size.width / 1.2
-    let windowHeight = UIScreen.main.bounds.size.height / 1.2
+//    @ObservedObject var viewModel: ControlPostCellViewModel
+//
+//    init(viewModel: ControlPostCellViewModel) {
+//        self.viewModel = viewModel
+//    }
     
     var body: some View {
         ZStack{
@@ -65,7 +71,7 @@ struct PostManagerView: View {
                     HStack{
                         Button(action: {
                             ///TODO:タグの追加処理を書く
-                            self.isAddTag.toggle()
+//                            self.isAddTag.toggle()
                         }){
                             HStack{
                                 Image(systemName: "plus")
@@ -158,8 +164,8 @@ struct PostManagerView: View {
             .padding()
             .background(Color("buttonFontColor"))
             
-            TagManegerListView(isOpenList: $isOpenList)
-                .edgesIgnoringSafeArea(.all)
+//            TagManegerListView(isOpenList: $isOpenList)
+//                .edgesIgnoringSafeArea(.all)
         }//ZStack
     }
 }

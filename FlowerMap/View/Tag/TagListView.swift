@@ -9,14 +9,14 @@
 //
 //struct TagListView: View {
 //    @ObservedObject var viewModel: TagViewModel
+//    @Binding var tagName: String        // 仮表示のタグ
 //    @Binding var searchTagText: String  // 検索テキスト
-//    @Binding var tagsArray: [String]    // タグの配列
 //    @Binding var isTagList: Bool        // TagListを開く
-//    
+//
 //    var tags: [Tag] {
 //        return searchTagText.isEmpty ? viewModel.tags : viewModel.filteredTags(searchTagText)
 //    }
-//    
+//
 //    var body: some View {
 //        ScrollView {
 //            LazyVStack {
@@ -26,6 +26,7 @@
 //                        .onTapGesture {
 //                            //押したときの処理
 //                            tagsArray.append(tag.name)  // 配列にタグを追加する
+//                            tagName = tag.name          // タグを仮表示する
 //                            searchTagText = ""          // テキストフィールドをリセットする
 //                            isTagList = false           // リストを閉じる
 //                        }
